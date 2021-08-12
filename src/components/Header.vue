@@ -29,3 +29,100 @@
     </nav>
   </header>
 </template>
+
+<style scoped>
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 4rem;
+  font-weight: var(--font-semi-bold);
+  font-style: italic;
+  font-size: var(--h2-font-size);
+}
+
+.nav_toggle {
+  display: none;
+}
+
+.nav_item:hover {
+  color: var(--turquoise);
+  transition: 0.2s ease-in all;
+}
+
+.nav_item:not(:last-child) {
+  margin-right: var(--mb-2);
+}
+
+.button_link:not(:last-child) {
+  margin-right: 1.5rem;
+}
+
+button {
+  padding: 0.5rem 2rem;
+  font-family: var(--body-font);
+  font-style: italic;
+  color: var(--blue);
+  border: 1.5px solid var(--blue);
+  border-radius: 0.3rem;
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-semi-bold);
+  cursor: pointer;
+}
+
+.trial-button {
+  background-color: var(--turquoise);
+}
+
+.log-button {
+  background-color: var(--white);
+}
+
+.trial-button:hover {
+  background: linear-gradient(to bottom right, var(--blue), var(--turquoise));
+  color: var(--white);
+  transition: 0.2s ease-in all;
+}
+
+.log-button:hover {
+  background: linear-gradient(to bottom left, var(--off-white), var(--blue));
+  color: var(--white);
+  transition: 0.2s ease-in all;
+}
+
+@media screen and (max-width: 768px) {
+  .nav_menu {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    padding-top: 1.5rem;
+    text-align: center;
+    background-color: inherit;
+    transition: 0.4s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 1rem 1rem;
+  }
+
+  .nav_list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav_toggle {
+    display: block;
+    border: none;
+  }
+
+  .nav_buttons {
+    display: none;
+  }
+
+  .nav_button {
+    border: none;
+    background: inherit;
+    font-size: 2rem;
+    padding: 0;
+  }
+}
+</style>>
