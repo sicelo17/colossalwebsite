@@ -61,4 +61,47 @@
     --smaller-font-size: 0.813rem;
   }
 }
+
+
+/* ==== GLOBAL CSS ==== */
+
+body {
+  background-color: var(--off-white);
+  margin: var(--header-height) 0 0 0;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-medium);
+  color: var(--blue);
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+ul,
+p {
+  margin: 0;
+}
+
+h2,
+h3 {
+  font-weight: var(--font-semi-bold);
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--blue);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 </style>
