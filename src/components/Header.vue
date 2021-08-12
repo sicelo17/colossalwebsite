@@ -30,6 +30,25 @@
   </header>
 </template>
 
+<script>
+export default {
+    name: "Header",
+  methods: {
+    toggleMenu() {
+      const menuBox = document.getElementById("nav-menu");
+      // if is menuBox displayed, hide it
+      if (menuBox.style.right === "1rem") {
+        menuBox.style.right = "-100%";
+      }
+      // if is menuBox hidden, display it
+      else {
+        menuBox.style.right = "1rem";
+      }
+    },
+  },
+};
+</script>
+
 <style scoped>
 .nav {
   display: flex;
@@ -93,8 +112,8 @@ button {
 @media screen and (max-width: 768px) {
   .nav_menu {
     position: fixed;
-    top: 0;
-    left: -100%;
+    top: 10%;
+    right: -100%;
     width: 100%;
     padding-top: 1.5rem;
     text-align: center;
@@ -102,6 +121,10 @@ button {
     transition: 0.4s;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 0 0 1rem 1rem;
+  }
+
+  .nav_item {
+      padding: 2rem;
   }
 
   .nav_list {
