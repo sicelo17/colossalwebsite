@@ -6,9 +6,9 @@
       <div class="nav_menu" id="nav-menu">
         <ul class="nav_list">
           <router-link class="nav_item" to="/">Home</router-link>
-          <router-link class="nav_item" to="/">Services</router-link>
-          <router-link class="nav_item" to="/">Industries</router-link>
-          <router-link class="nav_item" to="/">Products</router-link>
+          <router-link class="nav_item" to="/services">Services</router-link>
+          <router-link class="nav_item" to="/industries">Industries</router-link>
+          <router-link class="nav_item" to="/products">Products</router-link>
         </ul>
       </div>
 
@@ -50,6 +50,12 @@ export default {
 </script>
 
 <style scoped>
+.router-link-active {
+    background: var(--off-white);
+    padding: .5rem;
+    border-radius: .5rem;
+    font-weight: var(--font-bold);
+}
 .nav {
   display: flex;
   justify-content: space-between;
