@@ -135,6 +135,13 @@ img {
     font-weight: var(--font-semi-bold);
 }
 
+.button {
+  border-radius: 3rem;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  
+}
+
 /* ==== LAYOUT ==== */
 
 .bd-container {
