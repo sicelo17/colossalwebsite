@@ -74,7 +74,7 @@ img {
 
 .slide {
     display: block;
-	height: 500px;
+	height: 80vh;
 	object-fit: cover;
 	width: 100%;
 }

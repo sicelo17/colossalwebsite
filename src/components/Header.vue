@@ -123,7 +123,7 @@ button {
     width: 100%;
     padding-top: 1.5rem;
     text-align: center;
-    background-color: inherit;
+    background-color: var(--off-white);
     transition: 0.4s;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 0 0 1rem 1rem;
