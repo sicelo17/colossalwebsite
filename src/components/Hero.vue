@@ -1,7 +1,7 @@
 <template>
 <section class="section">
       <div class="hero-section">
-      <div class="bd-container">
+    
       <agile :dots="false" :autoplay="true" :infinite="true" :autoplay-speed="8000" :speed="2500" :navButtons="false" fade :pauseOnHover="false" >
     <div class="slide">
      <div class="hero-1">
@@ -23,7 +23,6 @@
       </div>
     </div>
   </agile>
-  </div>
   </div>
 </section>
 </template>
@@ -76,11 +75,11 @@ img {
     display: block;
 	height: 80vh;
 	object-fit: cover;
-	width: 100%;
+	width: 100vw;
 }
 
 .hero-section {
-    height: 100vh;
+    height: 90vh;
 }
 .button {
     background-color: var(--blue);
