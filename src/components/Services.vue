@@ -6,12 +6,12 @@
 
 <div class="bd-container categories" >
 	<div class="filter">
-	    <label><input type="radio" v-model="selectedCategory" value="All" /> All</label>
 		<label><input type="radio" v-model="selectedCategory" value="Sales" />Sales</label>
 		<label><input type="radio" v-model="selectedCategory" value="Manufacturing" /> Manufacturing</label>
 		<label><input type="radio" v-model="selectedCategory" value="Finance" /> Finance</label>
         <label><input type="radio" v-model="selectedCategory" value="eLearning" /> E-learning</label>
         <label><input type="radio" v-model="selectedCategory" value="Websites" /> Websites</label>
+        <label><input type="radio" v-model="selectedCategory" value="All" /> All</label>
 	</div>
 	
 	<ul class="categories-list">
@@ -38,9 +38,9 @@ export default {
           categories: [
 			{ category: "Sales", src: require('../assets/sales.jpg'), description: "Our software will boost sales by making your work easier and increase in employee efficiency " },
             { category: "Manufacturing", src: require('../assets/manufacturing.jpg'), description: "Software that helps to generate quotations and invoices at a faster rate and easier"},
-            { category: "Finance", src: require(''), description: "Software that makes handling all your acoounting needs a lot less stressful making you look forward to the end of the month"}
+            { category: "Finance", src: require('../assets/manufacturing.jpg'), description: "Software that makes handling all your acoounting needs a lot less stressful making you look forward to the end of the month"},
 		],
-		selectedCategory: "All"
+		selectedCategory: "Sales",
       }
   },
 	computed: {
@@ -92,15 +92,23 @@ input[type='radio'] {
 -o-appearance: none;
 appearance: none;
 }
+img {
+    border-radius: 3rem;
+}
 
+h2 {
+    font-size: 2.3rem;
+}
 .filter {
     background: white;
+    padding: .875rem;
 }
 
 .category_list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 3rem;
+    padding: 3rem;
 }
 
 .category-right {
