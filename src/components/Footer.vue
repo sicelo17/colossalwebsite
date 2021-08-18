@@ -61,6 +61,7 @@ footer {
 
 h1 {
     font-size: 2.4rem;
+    font-weight: var(--font-semi-bold);
 }
 p {
     font-size: 1rem;

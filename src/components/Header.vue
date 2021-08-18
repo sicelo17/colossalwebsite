@@ -33,7 +33,7 @@
 <script>
 export default {
     name: "Header",
-  methods: {
+    methods: {
     toggleMenu() {
       const menuBox = document.getElementById("nav-menu");
       // if is menuBox displayed, hide it
@@ -44,8 +44,8 @@ export default {
       else {
         menuBox.style.right = "1rem";
       }
-    },
-  },
+    }
+    }
 };
 </script>
 
@@ -68,6 +68,10 @@ export default {
 
 .nav_toggle {
   display: none;
+}
+
+.nav-extended {
+  background: black;
 }
 
 .nav_item:hover {
@@ -115,10 +119,10 @@ button {
   transition: 0.2s ease-in all;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 850px) {
   .nav_menu {
     position: fixed;
-    top: 10%;
+    top: 4rem;
     right: -100%;
     width: 100%;
     padding-top: 1.5rem;

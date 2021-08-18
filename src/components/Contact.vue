@@ -57,4 +57,11 @@ export default {
     border: 2px solid var(--turquoise);
     padding: 1rem 3rem;
 }
+
+.button:hover {
+    background: linear-gradient(to bottom right, var(--blue), var(--turquoise));
+  color: var(--white);
+  transition: 0.2s ease-in all;
+}
+
 </style>
