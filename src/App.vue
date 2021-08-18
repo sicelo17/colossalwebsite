@@ -1,17 +1,17 @@
 <template>
-  <div>
     <Header />
-    
-  </div>
   <router-view/>
+  <Footer />
 </template>
 
 <script>
 import Header from './components/Header.vue'
+import Footer from "./components/Footer.vue"
 
 export default {
   components: {
-    Header
+    Header,
+    Footer
   }
 }
 </script>
@@ -133,6 +133,13 @@ img {
     display: block;
     font-size: var(--smaller-font-size);
     font-weight: var(--font-semi-bold);
+}
+
+.button {
+  border-radius: 3rem;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  
 }
 
 /* ==== LAYOUT ==== */
