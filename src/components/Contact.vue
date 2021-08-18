@@ -27,7 +27,9 @@ export default {
 <style scoped>
 .contact{
     text-align: center;
-    background: white;
+    background: url("https://images.pexels.com/photos/955395/pexels-photo-955395.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+    background-repeat: no-repeat;
+    background-size: cover;
     font-style: italic;
     margin-bottom: 2rem;
 }
@@ -43,7 +45,11 @@ export default {
     font-family: var(--body-font);
     font-weight: var(--font-semi-bold);
 }
-
+.button:hover {
+  background: linear-gradient(to bottom right, var(--blue), var(--turquoise));
+  color: var(--white);
+  transition: 0.2s ease-in all;
+}
 .request {
     background-color: var(--white);
     color: var(--blue);
