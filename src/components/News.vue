@@ -13,7 +13,7 @@
                   <p>{{blog.summary}}</p>
               </div>
 
-              <button class="button"><a href="#">Read More</a></button>
+             <a href="#">Read More</a>
           </div>
       </div>
 
@@ -45,6 +45,10 @@ h1 {
     padding: 2rem;
 }
 
+a {
+    float: right;
+    font-weight: var(--font-bold);
+}
 .cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -58,5 +62,9 @@ h1 {
   overflow: hidden;
   box-shadow: 0 4px 6px rgba(174, 190, 205, 0.3);
   padding: 2rem;
+}
+
+.card:hover {
+    transform: scale(1.04);
 }
 </style>
