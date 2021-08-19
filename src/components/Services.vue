@@ -6,12 +6,12 @@
 
 <div class="bd-container categories" >
 	<div class="filter">
-		<label><input type="radio" v-model="selectedCategory" value="Sales" />Sales</label>
-		<label><input type="radio" v-model="selectedCategory" value="Manufacturing" /> Manufacturing</label>
-		<label><input type="radio" v-model="selectedCategory" value="Finance" /> Finance</label>
-        <label><input type="radio" v-model="selectedCategory" value="eLearning" /> E-learning</label>
-        <label><input type="radio" v-model="selectedCategory" value="Websites" /> Websites</label>
-        <label><input type="radio" v-model="selectedCategory" value="All" /> All</label>
+		<label><input type="radio" v-model="selectedCategory" value="Sales" /><span>Sales</span></label>
+		<label><input type="radio" v-model="selectedCategory" value="Manufacturing" /> <span>Manufacturing</span></label>
+		<label><input type="radio" v-model="selectedCategory" value="Finance" /> <span>Finance</span></label>
+        <label><input type="radio" v-model="selectedCategory" value="eLearning" /> <span>E-learning</span></label>
+        <label><input type="radio" v-model="selectedCategory" value="Websites" /> <span>Websites</span></label>
+        <label><input type="radio" v-model="selectedCategory" value="All" /> <span>All</span></label>
 	</div>
 	
 	<ul class="categories-list">
@@ -99,6 +99,11 @@ img {
 h2 {
     font-size: 2.3rem;
 }
+
+.filter input[type="radio"]:checked ~ *{
+   border-bottom: solid 4px var(--turquoise);
+}
+
 .filter {
     background: white;
     padding: .875rem;
@@ -114,5 +119,4 @@ h2 {
 .category-right {
     padding: 2rem;
 }
-
 </style>
