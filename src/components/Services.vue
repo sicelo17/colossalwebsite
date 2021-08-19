@@ -11,7 +11,7 @@
 		<label><input type="radio" v-model="selectedCategory" value="Finance" /> <span>Finance</span></label>
         <label><input type="radio" v-model="selectedCategory" value="eLearning" /> <span>E-learning</span></label>
         <label><input type="radio" v-model="selectedCategory" value="Websites" /> <span>Websites</span></label>
-        <label><input type="radio" v-model="selectedCategory" value="All" /> <span>All</span></label>
+        <label><input type="radio" v-model="selectedCategory" value="Marketing" /> <span>Marketing</span></label>
 	</div>
 	
 	<ul class="categories-list">
@@ -46,17 +46,14 @@ export default {
 	computed: {
 		filteredCategories: function() {
 			var category = this.selectedCategory;
-			
-			if(category === "All") {
-				return this.categories;
-			} else {
+
 				return this.categories.filter(function(person) {
 					return person.category === category;
 				});
 			}
 		}
 	}
-}
+
 </script>
 
 <style scoped>
@@ -102,6 +99,7 @@ h2 {
 
 .filter input[type="radio"]:checked ~ *{
    border-bottom: solid 4px var(--turquoise);
+   transition: .3s ease all;
 }
 
 .filter {
