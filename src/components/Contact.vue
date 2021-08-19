@@ -27,9 +27,7 @@ export default {
 <style scoped>
 .contact{
     text-align: center;
-    background: url("https://images.pexels.com/photos/955395/pexels-photo-955395.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
-    background-repeat: no-repeat;
-    background-size: cover;
+    background: white;
     font-style: italic;
     margin-bottom: 2rem;
 }
