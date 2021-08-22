@@ -37,12 +37,12 @@ export default {
     toggleMenu() {
       const menuBox = document.getElementById("nav-menu");
       // if is menuBox displayed, hide it
-      if (menuBox.style.right === "1rem") {
+      if (menuBox.style.right === "0.5rem") {
         menuBox.style.right = "-100%";
       }
       // if is menuBox hidden, display it
       else {
-        menuBox.style.right = "1rem";
+        menuBox.style.right = "0.5rem";
       }
     },
   },
@@ -118,10 +118,10 @@ button {
 @media screen and (max-width: 768px) {
   .nav_menu {
     position: fixed;
-    top: 10%;
+    top: 8%;
     right: -100%;
-    width: 100%;
-    padding-top: 1.5rem;
+    width: 95%;
+    padding-top: 1rem;
     text-align: center;
     background-color: var(--off-white);
     transition: 0.4s;
