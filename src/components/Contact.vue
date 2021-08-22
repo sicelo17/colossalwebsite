@@ -29,17 +29,21 @@ export default {
     text-align: center;
     background: white;
     font-style: italic;
-    margin-bottom: 2rem;
+    margin-bottom: var(--mb-4);
+    line-height: 1.2;
+}
+.heading {
+  margin-bottom: var(--mb-3);
 }
 .buttons {
     display: flex;
     justify-content: space-around;
-    padding-bottom: 2rem;
+    padding-bottom: var(--mb-4);
 }
 
 .button {
     font-style: italic;
-    font-size: 1.6rem;
+    font-size: var(--h2-font-size);
     font-family: var(--body-font);
     font-weight: var(--font-semi-bold);
 }
@@ -60,5 +64,24 @@ export default {
     color: var(--turquoise);
     border: 2px solid var(--turquoise);
     padding: 1rem 3rem;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+@media only screen and (max-width: 520px) {
+  .heading {
+    margin: 0;
+  }
+  .buttons {
+    flex-direction: column;
+  }
+
+  .button{
+    margin-top: 2rem;
+  }
+
+  .button:last-child {
+    margin-bottom: 0;
+  }
 }
 </style>
