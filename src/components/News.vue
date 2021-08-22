@@ -86,14 +86,14 @@ a {
 /* ===== RESPONSIVE DESIGN ===== */
 
 @media only screen and (max-width: 800px) {
-    .cards {
-        grid-template-columns: repeat(2, 1fr);
-    }
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media only screen and (max-width: 500px) {
-    .cards {
-        grid-template-columns: 1fr;
-    }
+  .cards {
+    grid-template-columns: 1fr;
+  }
 }
 </style>

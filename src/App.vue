@@ -1,19 +1,19 @@
 <template>
-    <Header />
-  <router-view/>
+  <Header />
+  <router-view />
   <Footer />
 </template>
 
 <script>
-import Header from './components/Header.vue'
-import Footer from "./components/Footer.vue"
+import Header from "./components/Header.vue";
+import Footer from "./components/Footer.vue";
 
 export default {
   components: {
     Header,
-    Footer
-  }
-}
+    Footer,
+  },
+};
 </script>
 <style>
 /* ==== GOOGLE FONTS ==== */
@@ -71,7 +71,6 @@ export default {
   }
 }
 
-
 /* ==== GLOBAL CSS ==== */
 
 body {
@@ -115,54 +114,53 @@ img {
 /* ==== CLASS CSS ==== */
 
 .section {
-    padding: 4rem 0 2rem;
+  padding: 4rem 0 2rem;
 }
 
 .section-title,
 .section-subtitle {
-    text-align: center;
+  text-align: center;
 }
 
 .section-title {
-    font-size: var(--h1-font-size);
-    color: var(--first-color);
-    margin-bottom: var(--mb-3);
+  font-size: var(--h1-font-size);
+  color: var(--first-color);
+  margin-bottom: var(--mb-3);
 }
 
 .section-subtitle {
-    display: block;
-    font-size: var(--smaller-font-size);
-    font-weight: var(--font-semi-bold);
+  display: block;
+  font-size: var(--smaller-font-size);
+  font-weight: var(--font-semi-bold);
 }
 
 .button {
   border-radius: 3rem;
   padding: 1rem 2rem;
   cursor: pointer;
-  
 }
 
 /* ==== LAYOUT ==== */
 
 .bd-container {
-    max-width: auto;
-    width: calc(100% - 2rem);
-    margin-left: var(--mb-2);
-    margin-right: var(--mb-2);
+  max-width: auto;
+  width: calc(100% - 2rem);
+  margin-left: var(--mb-2);
+  margin-right: var(--mb-2);
 }
 
 .bd-grid {
-    display: grid;
-    gap: 1.5rem;
+  display: grid;
+  gap: 1.5rem;
 }
 
 .l-header {
-    width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: var(--z-top);
-    background-color: var(--white);
-    box-shadow: 0 .3rem .3rem 0 rgba(0, 0, 0, .1);
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--z-top);
+  background-color: var(--white);
+  box-shadow: 0 0.3rem 0.3rem 0 rgba(0, 0, 0, 0.1);
 }
 </style>
