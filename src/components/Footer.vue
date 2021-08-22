@@ -77,7 +77,25 @@ p {
     font-size: 1.4rem;
 }
 
+.links:hover {
+    transform: scale(1.1);
+}
+
 .copyright {
     text-align: center;
+}
+/* ===== RESPONSIVE DESIGN ===== */
+
+@media only screen and (max-width: 672px) {
+    .footer_links {
+        display: grid;
+        grid-template-columns: repeat(2 ,1fr);
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .footer_links {
+        grid-template-columns: 1fr;
+    }
 }
 </style>
