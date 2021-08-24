@@ -131,7 +131,7 @@ img {
 }
 
 h2 {
-  font-size: 2.3rem;
+  font-size: var(--h1-font-size);
 }
 
 .filter input[type="radio"]:checked ~ * {
@@ -154,4 +154,8 @@ h2 {
 .category-right {
   padding: 2rem;
 }
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+
 </style>
