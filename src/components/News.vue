@@ -69,6 +69,7 @@ a {
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 2rem;
   margin-bottom: 2rem;
+  font-family: var(--font-2);
 }
 
 .card {
