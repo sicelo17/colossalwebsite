@@ -20,12 +20,12 @@
           <span>Manufacturing</span></label
         >
         <label
-          ><input type="radio" v-model="selectedCategory" value="Finance" />
-          <span>Finance</span></label
+          ><input type="radio" v-model="selectedCategory" value="Accounting" />
+          <span>Accounting</span></label
         >
         <label
           ><input type="radio" v-model="selectedCategory" value="eLearning" />
-          <span>E-learning</span></label
+          <span>e-Learning</span></label
         >
         <label
           ><input type="radio" v-model="selectedCategory" value="Websites" />
@@ -141,20 +141,23 @@ export default {
           category: "Sales",
           src: require("../assets/sales.jpg"),
           description:
-            "Our software will boost sales by making your work easier and increase in employee efficiency ",
+            "Send clear and complete quotations to your prospects. Add product descriptions, beautiful images, and additional information simply by dragging and dropping building blocks.",
         },
         {
           category: "Manufacturing",
           src: require("../assets/manufacturing.jpg"),
           description:
-            "Software that helps to generate quotations and invoices at a faster rate and easier",
+            "Use make-to-order rules, minimum stock rules or the master production schedule to automate procurements. Let the scheduler compute everything for you. Use routes, constraints and lead time to optimize inventory level and avoid shortages.",
         },
         {
-          category: "Finance",
-          src: require("../assets/manufacturing.jpg"),
+          category: "Accounting",
+          src: require("../assets/accounting.jpeg"),
           description:
-            "Software that makes handling all your acoounting needs a lot less stressful making you look forward to the end of the month",
+            "Send reminders to your debtors in just a few clicks. Simply set-up and automate follow-ups to get paid more quickly. Automatically create invoices from sales orders, delivery orders or base them on time and material.",
         },
+        {category: "eLearning", src: require("../assets/eLearning.jpeg"), description: "Meaningful learning experiences lead to increased attention and focus, higher levels of critical thinking and more productivity!"},
+        {category: "Websites" , src: require("../assets/website.jpeg"), description: "Build breathtaking websites easily by just dragging and dropping components. Having your business online is one of the requirements of the fourth industrial revolution as this will broaden your target market."},
+        {category: "Marketing", src: require("../assets/marketing2.jpeg"), description: "Being present on Social Media increases awareness, connects you with your customers, boosts leads, and income. It can also provide customer support and help broadcast important company news and messages."}
       ],
       selectedCategory: "Sales",
       mobile: null,
