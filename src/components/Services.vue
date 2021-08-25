@@ -147,13 +147,13 @@ export default {
           category: "Manufacturing",
           src: require("../assets/manufacturing.jpg"),
           description:
-            "Use make-to-order rules, minimum stock rules or the master production schedule to automate procurements. Let the scheduler compute everything for you. Use routes, constraints and lead time to optimize inventory level and avoid shortages.",
+            "Use make-to-order rules, minimum stock rules or the master production schedule to automate procurements. ",
         },
         {
           category: "Accounting",
           src: require("../assets/accounting.jpeg"),
           description:
-            "Send reminders to your debtors in just a few clicks. Simply set-up and automate follow-ups to get paid more quickly. Automatically create invoices from sales orders, delivery orders or base them on time and material.",
+            "Send reminders to your debtors in just a few clicks. Automatically create invoices from sales orders, delivery orders or base them on time and material.",
         },
         {
           category: "eLearning",
@@ -165,13 +165,13 @@ export default {
           category: "Websites",
           src: require("../assets/website.jpeg"),
           description:
-            "Build breathtaking websites easily by just dragging and dropping components. Having your business online is one of the requirements of the fourth industrial revolution as this will broaden your target market.",
+            "Having your business online is one of the requirements of the fourth industrial revolution as this will broaden your target market.",
         },
         {
           category: "Marketing",
           src: require("../assets/marketing2.jpeg"),
           description:
-            "Being present on Social Media increases awareness, connects you with your customers, boosts leads, and income. It can also provide customer support and help broadcast important company news and messages.",
+            "Being present on Social Media increases awareness, connects you with your customers, boosts leads, and income. ",
         },
       ],
       selectedCategory: "Sales",
