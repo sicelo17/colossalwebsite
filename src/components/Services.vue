@@ -1,10 +1,10 @@
 <template>
   <section class="services">
-    <h1 class="section-title service_title">
+    <h1 class="bd-container section-title service_title">
       Software suitable for every business
     </h1>
 
-    <div class="bd-container categories">
+    <div v-if="!mobile" class="categories">
       <div class="filter">
         <label
           ><input type="radio" v-model="selectedCategory" value="Sales" /><span
@@ -51,11 +51,83 @@
       </ul>
     </div>
 
-   <div class="bd-container categories-mobile bd-grid">
-       <div class="cate">shjvbsjbv</div>
-       <div class="cate">shjvbsjbv</div>
-       <div class="cate">shjvbsjbv</div>
-   </div>
+    <div v-else class="categories-mobile bd-grid">
+      <div class="categories_mobile">
+        <div class="category-heading">
+          <h3>Boost your sales</h3>
+        </div>
+        <div class="apps">
+          <div class="app">
+            <router-link to="/sales">
+              <span class="app1"><i class="bx bx-trending-up"></i></span>
+              <p>Sales</p>
+            </router-link>
+          </div>
+          <div class="app">
+            <router-link to="/crm">
+              <span class="app2"><i class="bx bx-support"></i></span>
+              <p>CRM</p>
+            </router-link>
+          </div>
+          <div class="app">
+            <router-link to="/point-of-sale">
+              <span class="app3"><i class="bx bxs-bank"></i></span>
+              <p>POS</p>
+            </router-link>
+          </div>
+        </div>
+      </div>
+      <div class="categories_mobile">
+        <div class="category-heading">
+          <h3>Have Your Services Integrated</h3>
+        </div>
+        <div class="apps">
+          <div class="app">
+            <router-link to="/timesheet">
+              <span class="app1"><i class="bx bxs-time-five"></i></span>
+              <p>Timesheet</p>
+            </router-link>
+          </div>
+          <div class="app">
+            <router-link to="/project">
+              <span class="app2"><i class="bx bx-clipboard"></i></span>
+              <p>Project</p>
+            </router-link>
+          </div>
+          <div class="app">
+            <router-link to="/helpdesk">
+              <span class="app3"><i class="bx bx-desktop"></i></span>
+              <p>Helpdesk</p>
+            </router-link>
+          </div>
+        </div>
+      </div>
+      <div class="categories_mobile">
+        <div class="category-heading">
+          <h3>Manage Your Finances</h3>
+        </div>
+        <div class="apps">
+          <div class="app">
+            <router-link to="/timesheet">
+              <span class="app1"><i class="bx bx-money"></i></span>
+              <p>Invoicing</p>
+            </router-link>
+          </div>
+          <div class="app">
+            <router-link to="/project">
+              <span class="app2"><i class="bx bxs-coin-stack"></i></span>
+              <p>Accounting</p>
+            </router-link>
+          </div>
+        </div>
+      </div>
+
+      <div class="categories_mobile">
+          <router-link to="/services">
+          <button class="button">More Apps</button>
+          </router-link>
+      </div>
+    </div>
   </section>
 </template>
 
@@ -88,19 +160,19 @@ export default {
       mobile: null,
     };
   },
-  created () {
-      this.checkScreen();
-      window.addEventListener("resize", this.checkScreen);
+  created() {
+    this.checkScreen();
+    window.addEventListener("resize", this.checkScreen);
   },
-  methods : {
-      checkScreen () {
-          const windowWidth = window.innerWidth;
-          if (windowWidth <= 750) {
-              this.mobile = true;
-              return
-          }
-          this.mobile = false;
+  methods: {
+    checkScreen() {
+      const windowWidth = window.innerWidth;
+      if (windowWidth <= 800) {
+        this.mobile = true;
+        return;
       }
+      this.mobile = false;
+    },
   },
   computed: {
     filteredCategories: function () {
@@ -177,10 +249,42 @@ h2 {
 }
 
 .categories-mobile {
-    grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr;
+  text-align: center;
 }
 
-/* ===== RESPONSIVE DESIGN ===== */
+.category-heading {
+  font-size: var(--h2-font-size);
+  margin: 0 0 1.5rem 0;
+}
 
+.apps {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+.app:not(:last-child) {
+  margin-right: var(--h3-font-size);
+}
+
+.app {
+  background: var(--white);
+}
+.app p {
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-bold);
+}
+.bx {
+  font-size: var(--biggest-font-size);
+  padding: 2rem;
+}
+
+.button {
+    border: 2px solid var(--blue);
+    color: var(--blue);
+    font-size: var(--h1-font-size);
+    font-style: italic;
+    font-family: var(--body-font);
+}
 </style>

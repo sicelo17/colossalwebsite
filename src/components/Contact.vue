@@ -1,5 +1,5 @@
 <template>
-  <div class="bd-container">
+
     <div class="contact">
       <div class="heading">
         <h1>Interested in working with us?</h1>
@@ -15,7 +15,6 @@
         >
       </div>
     </div>
-  </div>
 </template>
 
 <script>
