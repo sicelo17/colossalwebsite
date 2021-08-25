@@ -251,6 +251,7 @@ h2 {
 .categories-mobile {
   grid-template-columns: 1fr;
   text-align: center;
+  margin: 2rem 0;
 }
 
 .category-heading {
@@ -283,8 +284,9 @@ h2 {
 .button {
     border: 2px solid var(--blue);
     color: var(--blue);
+    font-family: var(--body-font);
     font-size: var(--h1-font-size);
     font-style: italic;
-    font-family: var(--body-font);
+
 }
 </style>
