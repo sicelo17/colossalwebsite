@@ -50,6 +50,12 @@
         </li>
       </ul>
     </div>
+
+   <div class="bd-container categories-mobile bd-grid">
+       <div class="cate">shjvbsjbv</div>
+       <div class="cate">shjvbsjbv</div>
+       <div class="cate">shjvbsjbv</div>
+   </div>
   </section>
 </template>
 
@@ -79,7 +85,22 @@ export default {
         },
       ],
       selectedCategory: "Sales",
+      mobile: null,
     };
+  },
+  created () {
+      this.checkScreen();
+      window.addEventListener("resize", this.checkScreen);
+  },
+  methods : {
+      checkScreen () {
+          const windowWidth = window.innerWidth;
+          if (windowWidth <= 750) {
+              this.mobile = true;
+              return
+          }
+          this.mobile = false;
+      }
   },
   computed: {
     filteredCategories: function () {
@@ -153,6 +174,10 @@ h2 {
 
 .category-right {
   padding: 2rem;
+}
+
+.categories-mobile {
+    grid-template-columns: repeat(3, 1fr);
 }
 
 /* ===== RESPONSIVE DESIGN ===== */
