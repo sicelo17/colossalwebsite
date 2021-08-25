@@ -187,6 +187,10 @@ export default {
 </script>
 
 <style scoped>
+.services {
+      line-height: 1.2;
+}
+
 .service_title {
   font-size: 3rem;
 }
@@ -275,6 +279,7 @@ h2 {
 .app p {
   font-size: var(--h3-font-size);
   font-weight: var(--font-bold);
+  padding-bottom: 1.4rem;
 }
 .bx {
   font-size: var(--biggest-font-size);
