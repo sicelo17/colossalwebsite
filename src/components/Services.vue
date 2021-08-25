@@ -123,9 +123,9 @@
       </div>
 
       <div class="categories_mobile">
-          <router-link to="/services">
+        <router-link to="/services">
           <button class="button">More Apps</button>
-          </router-link>
+        </router-link>
       </div>
     </div>
   </section>
@@ -155,9 +155,24 @@ export default {
           description:
             "Send reminders to your debtors in just a few clicks. Simply set-up and automate follow-ups to get paid more quickly. Automatically create invoices from sales orders, delivery orders or base them on time and material.",
         },
-        {category: "eLearning", src: require("../assets/eLearning.jpeg"), description: "Meaningful learning experiences lead to increased attention and focus, higher levels of critical thinking and more productivity!"},
-        {category: "Websites" , src: require("../assets/website.jpeg"), description: "Build breathtaking websites easily by just dragging and dropping components. Having your business online is one of the requirements of the fourth industrial revolution as this will broaden your target market."},
-        {category: "Marketing", src: require("../assets/marketing2.jpeg"), description: "Being present on Social Media increases awareness, connects you with your customers, boosts leads, and income. It can also provide customer support and help broadcast important company news and messages."}
+        {
+          category: "eLearning",
+          src: require("../assets/eLearning.jpeg"),
+          description:
+            "Meaningful learning experiences lead to increased attention and focus, higher levels of critical thinking and more productivity!",
+        },
+        {
+          category: "Websites",
+          src: require("../assets/website.jpeg"),
+          description:
+            "Build breathtaking websites easily by just dragging and dropping components. Having your business online is one of the requirements of the fourth industrial revolution as this will broaden your target market.",
+        },
+        {
+          category: "Marketing",
+          src: require("../assets/marketing2.jpeg"),
+          description:
+            "Being present on Social Media increases awareness, connects you with your customers, boosts leads, and income. It can also provide customer support and help broadcast important company news and messages.",
+        },
       ],
       selectedCategory: "Sales",
       mobile: null,
@@ -191,7 +206,7 @@ export default {
 
 <style scoped>
 .services {
-      line-height: 1.2;
+  line-height: 1.2;
 }
 
 .service_title {
@@ -290,11 +305,10 @@ h2 {
 }
 
 .button {
-    border: 2px solid var(--blue);
-    color: var(--blue);
-    font-family: var(--body-font);
-    font-size: var(--h1-font-size);
-    font-style: italic;
-
+  border: 2px solid var(--blue);
+  color: var(--blue);
+  font-family: var(--body-font);
+  font-size: var(--h1-font-size);
+  font-style: italic;
 }
 </style>
