@@ -2,7 +2,7 @@
   <div>
     <Hero />
     <Services />
-    <News />
+    <Partners />
     <Contact />
   </div>
 </template>
@@ -10,7 +10,7 @@
 <script>
 import Hero from "../components/Hero.vue"
 import Services from "../components/Services.vue"
-import News from "../components/News.vue"
+import Partners from "../components/Partners.vue"
 import Contact from "../components/Contact.vue"
 
 export default {
@@ -18,7 +18,7 @@ export default {
   components: {
   Hero,
   Services,
-  News,
+  Partners,
   Contact,
   }
 }
