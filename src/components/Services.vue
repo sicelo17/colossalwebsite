@@ -196,8 +196,8 @@ export default {
     filteredCategories: function () {
       var category = this.selectedCategory;
 
-      return this.categories.filter(function (person) {
-        return person.category === category;
+      return this.categories.filter(function (cate) {
+        return cate.category === category;
       });
     },
   },
