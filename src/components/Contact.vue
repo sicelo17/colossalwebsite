@@ -31,6 +31,7 @@ export default {};
 }
 .heading {
   margin-bottom: var(--mb-3);
+  padding-top: 1rem;
 }
 .buttons {
   display: flex;

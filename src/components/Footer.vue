@@ -43,6 +43,9 @@
           <p>Copyright &copy; 2021 - ColossalHub</p>
       </div>
      </div>
+     <div class="partnership">
+          <p>In partnership with Odoo &reg;</p>
+      </div>
   </footer>
 </template>
 
@@ -82,8 +85,19 @@ p {
 }
 
 .copyright {
+    padding: 1rem;
+}
+
+.copyright, 
+.partnership{
     text-align: center;
 }
+
+.partnership {
+    background: #172547;
+    padding: .5rem;
+}
+
 /* ===== RESPONSIVE DESIGN ===== */
 
 @media only screen and (max-width: 672px) {
