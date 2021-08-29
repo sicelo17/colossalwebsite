@@ -44,7 +44,7 @@
               <img :src="category.src" />
             </div>
             <div class="category-right">
-              <h2>{{ category.description }}</h2>
+              <h3>{{ category.description }}</h3>
             </div>
           </div>
         </li>
@@ -268,6 +268,7 @@ h2 {
 
 .category-right {
   padding: 2rem;
+  font-size: var(--h3-font-size);
 }
 
 .categories-mobile {

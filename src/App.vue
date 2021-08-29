@@ -25,7 +25,7 @@ export default {
   --header-height: 3rem;
 
   /* ==== COLORS ==== */
-  --off-white: #efefef;
+  --off-white: #e0e0e0;
   --white: #fff;
   --blue: #243665;
   --turquoise: #8bd8bd;
