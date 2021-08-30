@@ -4,6 +4,7 @@ import Industries from '../views/Industries.vue'
 import Services from '../views/Services.vue'
 import Products from '../views/Products.vue'
 import Login from '../views/Login.vue'
+import SignUp from '../views/Signup.vue'
 
 const routes = [
   {
@@ -38,6 +39,11 @@ const routes = [
     path: '/login',
     name: 'Login',
     component: Login
+  },
+  {
+    path: '/sign-up',
+    name: 'SignUp',
+    component: SignUp
   },
 ]
 
