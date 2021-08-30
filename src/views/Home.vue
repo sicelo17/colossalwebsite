@@ -2,8 +2,8 @@
   <div>
     <Hero />
     <Services />
-    <Partners />
     <Contact />
+    <Partners />
   </div>
 </template>
 
