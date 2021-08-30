@@ -16,7 +16,7 @@
         <router-link to="/trial" class="button_link"
           ><button class="trial-button">Free Trial</button></router-link
         >
-        <router-link to="/signIn" class="button_link"
+        <router-link to="/login" class="button_link"
           ><button class="log-button">Sign In</button></router-link
         >
       </div>
