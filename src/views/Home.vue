@@ -20,6 +20,9 @@ export default {
   Services,
   Partners,
   Contact,
-  }
+  },
+  mounted() {
+    document.title = "Home | ColossalHub";
+  },
 }
 </script>
