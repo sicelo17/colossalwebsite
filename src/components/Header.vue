@@ -1,7 +1,7 @@
 <template>
   <header class="l-header" id="header">
     <nav class="nav bd-container" id="navbar">
-      <a href="#" class="nav_logo">ColossalHub</a>
+      <router-link to="/" class="nav_logo">ColossalHub</router-link>
 
       <div class="nav_menu" id="nav-menu">
         <ul class="nav_list">
@@ -55,6 +55,10 @@ export default {
     padding: .5rem;
     border-radius: .5rem;
     font-weight: var(--font-bold);
+}
+
+.nav_logo {
+  background: inherit;
 }
 .nav {
   display: flex;
