@@ -6,7 +6,9 @@
 
 <script>
 export default {
-
+mounted() {
+    document.title = "Products | ColossalHub";
+  },
 }
 </script>
 
