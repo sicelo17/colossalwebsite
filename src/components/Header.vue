@@ -83,6 +83,10 @@ export default {
   margin-right: var(--mb-2);
 }
 
+.button_link {
+  background: inherit;
+}
+
 .button_link:not(:last-child) {
   margin-right: 1.5rem;
 }
