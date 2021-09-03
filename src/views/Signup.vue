@@ -1,6 +1,7 @@
 <template>
-  <div class="bd-container">
-      <div class="login-page">
+  <div class="sign-up">
+    <div class="bd-container">
+      <div class="register-page">
     <div class="card">
       <div class="card-details">
           <span>ColossalHub</span>
@@ -59,6 +60,7 @@
     </div>
   </div>
   </div>
+  </div>
 </template>
 
 <script>
@@ -86,7 +88,11 @@ export default {
 
 <style scoped>
 
-.login-page {
+.sign-up {
+   background: linear-gradient(to bottom left, var(--off-white), var(--blue));
+}
+
+.register-page {
     height: 95vh;
 }
 .card {
@@ -154,11 +160,11 @@ button:hover {
   transition: 0.2s ease-in all;
 }
 
-.login {
+.register {
     font-style: normal;
 }
 
-.login:hover {
+.register:hover {
     text-decoration: underline;
     font-style: normal;
 }

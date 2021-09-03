@@ -1,5 +1,6 @@
 <template>
-  <div class="bd-container">
+  <div class="sign-in">
+    <div class="bd-container">
       <div class="login-page">
     <div class="card">
       <div class="card-details">
@@ -41,6 +42,7 @@
     </div>
   </div>
   </div>
+  </div>
 </template>
 
 <script>
@@ -65,6 +67,9 @@ export default {
 </script>
 
 <style scoped>
+.sign-in {
+  background: linear-gradient(to bottom right, var(--blue), var(--turquoise));
+}
 
 .login-page {
     height: 95vh;
