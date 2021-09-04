@@ -1,6 +1,9 @@
 <template>
   <section class="section">
       <div class="bd-container">
+        <div class="product-heading">
+          <h2>Some of our products</h2>
+        </div>
         <div class="products-page bd-grid">
         <div class="products">
           <div class="product">
@@ -97,6 +100,11 @@ mounted() {
   align-items: center;
   text-align: center;
   padding: 1.5rem;
+}
+
+.product-heading {
+  font-size: var(--h2-font-size);
+  text-align: center;
 }
 .products {
   display: flex;
