@@ -1,6 +1,8 @@
 <template>
   <section class="section">
-      Products
+      <div class="products-page">
+        
+      </div>
   </section>
 </template>
 

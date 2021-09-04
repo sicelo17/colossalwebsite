@@ -2,6 +2,9 @@
   <section class="section">
     <div class="industries-page bd-grid">
       <div class="bd-container">
+        <div class="industry-title">
+          <h1>We serve the following industries</h1>
+        </div>
         <div class="industry-items">
           <div class="industry">
             <div class="ind">
@@ -123,10 +126,16 @@ span {
 .industry {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
 }
 
 .ind:not(:last-child) {
   margin-right: 8rem;
+}
+
+.industry-title {
+  font-size: var(--h2-font-size);
+  text-align: center;
+  font-style: italic;
 }
 </style>
