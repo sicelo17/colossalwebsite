@@ -114,7 +114,7 @@
             </router-link>
           </div>
           <div class="app">
-            <router-link to="/project">
+            <router-link to="/accounting">
               <span class="app2"><i class="bx bxs-coin-stack"></i></span>
               <p>Accounting</p>
             </router-link>

@@ -86,14 +86,14 @@
             <div class="ind">
               <router-link to="/transportation">
                 <span><i class="bx bxs-truck"></i></span>
-                <p>Transportation & Logistics</p>
+                <p>Transportation</p>
               </router-link>
             </div>
 
             <div class="ind">
               <router-link to="/wholesale">
                 <span><i class="bx bxs-building-house"></i></span>
-                <p>Wholesale & Distribution</p>
+                <p>Wholesale</p>
               </router-link>
             </div>
           </div>
@@ -113,8 +113,15 @@ export default {
 
 <style scoped>
 
+.section {
+  background: linear-gradient(to top left, rgba(72, 140, 228, 0.897), var(--turquoise));
+}
+
 span {
   font-size: 4rem;
+  padding: .5rem;
+  border-radius: 1rem;
+  background: var(--white);
 }
 
 .industry-items {
@@ -127,6 +134,7 @@ span {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  padding: 1.5rem;
 }
 
 .ind:not(:last-child) {
