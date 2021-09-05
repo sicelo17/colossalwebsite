@@ -141,6 +141,10 @@ span {
   margin-right: 8rem;
 }
 
+.ind:hover {
+  transform: scale(1.1);
+}
+
 .industry-title {
   font-size: var(--h2-font-size);
   text-align: center;

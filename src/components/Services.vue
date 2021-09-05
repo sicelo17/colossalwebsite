@@ -108,7 +108,7 @@
         </div>
         <div class="apps">
           <div class="app">
-            <router-link to="/timesheet">
+            <router-link to="/invoicing">
               <span class="app1"><i class="bx bx-money"></i></span>
               <p>Invoicing</p>
             </router-link>
