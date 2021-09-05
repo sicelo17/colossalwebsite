@@ -146,7 +146,7 @@ span {
 }
 
 .industry-title {
-  font-size: var(--h2-font-size);
+  font-size: var(--h1-font-size);
   text-align: center;
   font-style: italic;
 }

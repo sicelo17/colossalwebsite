@@ -2,7 +2,11 @@
   <section class="section">
       <div class="service-page">
         <div class="bd-container">
+          <div class="service-title">
+            <h1>Our Services</h1>
+          </div>
           <div class="services">
+
             <div class="service_info">
               <div class="heading">
                 <h2>Sales</h2>
@@ -391,5 +395,11 @@ mounted() {
 .service_link:hover {
   transform: scale(1.1);
   font-weight: var(--font-bold);
+}
+
+.service-title {
+  text-align: center;
+  font-size: var(--h1-font-size);
+  font-style: italic;
 }
 </style>

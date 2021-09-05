@@ -2,7 +2,7 @@
   <section class="section">
       <div class="bd-container">
         <div class="product-heading">
-          <h2>Some of our products</h2>
+          <h1>Some of our products</h1>
         </div>
         <div class="products-page bd-grid">
         <div class="products">
@@ -101,10 +101,13 @@ mounted() {
   text-align: center;
   padding: 1.5rem;
 }
-
+.product:hover {
+  transform: scale(1.1);
+}
 .product-heading {
-  font-size: var(--h2-font-size);
+  font-size: var(--h1-font-size);
   text-align: center;
+  font-style: italic;
 }
 .products {
   display: flex;
