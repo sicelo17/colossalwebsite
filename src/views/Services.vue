@@ -374,6 +374,9 @@ mounted() {
 </script>
 
 <style scoped>
+.section {
+  background: linear-gradient(to top left, rgba(161, 191, 231, 0.897), var(--turquoise));
+}
 .services {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
