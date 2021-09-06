@@ -45,6 +45,12 @@
             </div>
             <div class="category-right">
               <h3>{{ category.description }}</h3>
+
+              <button class="button button-link">
+                <router-link to="{{category.routes}}">
+                Learn More
+                </router-link>
+              </button>
             </div>
           </div>
         </li>
@@ -142,6 +148,7 @@ export default {
           src: require("../assets/sales.jpg"),
           description:
             "Send clear and complete quotations to your prospects. Add product descriptions, beautiful images, and additional information simply by dragging and dropping building blocks.",
+            routes: "/sales",
         },
         {
           category: "Manufacturing",
@@ -311,5 +318,13 @@ h2 {
   font-family: var(--body-font);
   font-size: var(--h1-font-size);
   font-style: italic;
+}
+
+.button-link {
+  margin-top: var(--biggest-font-size);
+}
+
+.button-link:hover {
+  transform: scale(1.1);
 }
 </style>
