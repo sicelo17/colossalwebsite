@@ -63,10 +63,10 @@ footer {
 }
 
 h1 {
-    font-size: var(--h1-font-size);
+    font-size: 2.4rem;
 }
 p {
-    font-size: var(--normal-font-size);
+    font-size: 1rem;
 }
 .footer_links {
     display: flex;
@@ -77,7 +77,7 @@ p {
 .links{
     color: var(--turquoise);
     display: flex;
-    font-size: var(--h3-font-size);
+    font-size: 1.4rem;
 }
 
 .links:hover {
