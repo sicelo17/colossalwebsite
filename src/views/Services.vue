@@ -417,6 +417,7 @@ mounted() {
 @media only screen and (max-width: 510px) {
   .services {
     grid-template-columns: 1fr;
+    place-items: center;
   }
 }
 </style>
