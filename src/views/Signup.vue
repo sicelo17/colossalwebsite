@@ -118,6 +118,8 @@ input {
     width: 100%;
     font-size: 1.2rem;
     padding: .5rem;
+    font-family: var(--body-font);
+    font-style: italic;
 }
 
 input:focus {
