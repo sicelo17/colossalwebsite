@@ -405,4 +405,18 @@ mounted() {
   font-size: var(--h1-font-size);
   font-style: italic;
 }
+
+/* ==== RESPONSIVE DESIGN ==== */
+
+@media only screen and (max-width: 840px){
+  .services {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width: 510px) {
+  .services {
+    grid-template-columns: 1fr;
+  }
+}
 </style>
