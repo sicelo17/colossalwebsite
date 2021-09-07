@@ -63,7 +63,7 @@ footer {
 }
 
 h1 {
-    font-size: 2.4rem;
+    font-size: var(--biggest-font-size);
 }
 p {
     font-size: 1rem;
@@ -101,6 +101,7 @@ p {
 /* ===== RESPONSIVE DESIGN ===== */
 
 @media only screen and (max-width: 672px) {
+    h1
     .footer_links {
         display: grid;
         grid-template-columns: repeat(2 ,1fr);
