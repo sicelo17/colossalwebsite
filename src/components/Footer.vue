@@ -18,7 +18,7 @@
              <h1>Partnership</h1>
              <div class="footer-links">
                 <ul class="footer_routes">
-                     <router-link class="links" to="/signIn">Sign In</router-link>
+                     <router-link class="links" to="/login">Sign In</router-link>
                      <router-link class="links" to="/">Become a Partner</router-link>
                      <router-link class="links" to="/">Newsletter</router-link>
                      <router-link class="links" to="/">Testimonies</router-link>
