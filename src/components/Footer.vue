@@ -64,6 +64,7 @@ footer {
 
 h1 {
     font-size: 2.4rem;
+    font-weight: var(--font-medium);
 }
 p {
     font-size: 1rem;
@@ -77,7 +78,8 @@ p {
 .links{
     color: var(--turquoise);
     display: flex;
-    font-size: 1.4rem;
+    font-size: 1rem;
+    font-style: italic;
 }
 
 .links:hover {

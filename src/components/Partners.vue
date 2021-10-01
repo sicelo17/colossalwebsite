@@ -1,8 +1,8 @@
 <template>
-  <div class="bd-container">
+  <div class="partners bd-container">
       <carousel :items-to-show="0.5" :wrapAround= "true">
-    <slide v-for="slide in 10" :key="slide">
-      {{ slide }}
+    <slide v-for="slide in slides" :key="slide">
+      <img :src="slide.src">
     </slide>
 
     <template #addons>
@@ -14,12 +14,20 @@
 </template>
 
 <script>
-// If you are using PurgeCSS, make sure to whitelist the carousel CSS classes
 import 'vue3-carousel/dist/carousel.css';
 import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel';
 
 export default {
   name: 'App',
+  data(){
+    return{
+      slides: [
+        {
+          src: require("../assets/financial-paradise.jpeg"),
+        }
+      ],
+    }
+  },
   components: {
     Carousel,
     Slide,
@@ -28,3 +36,10 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.partners {
+  margin: 2rem 4rem;
+}
+
+</style>
