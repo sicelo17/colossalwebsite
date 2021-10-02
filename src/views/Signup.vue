@@ -53,8 +53,7 @@
         </div>
 
         <hr>
-        <router-link to="/login">I already have an account</router-link>
-
+          <router-link to="/login"><span class="login-link">I already have an account</span></router-link>
       </form>
       </div>
     </div>
@@ -169,5 +168,9 @@ button:hover {
 .register:hover {
     text-decoration: underline;
     font-style: normal;
+}
+
+.login-link:hover {
+  text-decoration: underline;
 }
 </style>
