@@ -64,7 +64,7 @@ export default {
   },
   methods: {
     submitForm() {
-      console.log("Form was submitted");
+      this.$router.push('/')
     },
   },
 };
