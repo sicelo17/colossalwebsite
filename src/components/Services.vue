@@ -47,7 +47,7 @@
               <h3>{{ category.description }}</h3>
 
               <button class="button button-link">
-                <router-link to="{{category.routes}}">
+                <router-link :to="category.routes">
                 Learn More
                 </router-link>
               </button>
@@ -155,30 +155,35 @@ export default {
           src: require("../assets/manufacturing.jpg"),
           description:
             "Use make-to-order rules, minimum stock rules or the master production schedule to automate procurements. ",
+            routes: "/manufacturing",
         },
         {
           category: "Accounting",
           src: require("../assets/accounting.jpeg"),
           description:
             "Send reminders to your debtors in just a few clicks. Automatically create invoices from sales orders, delivery orders or base them on time and material.",
+            routes: "/accounting",
         },
         {
           category: "eLearning",
           src: require("../assets/eLearning.jpeg"),
           description:
             "Meaningful learning experiences lead to increased attention and focus, higher levels of critical thinking and more productivity!",
+            routes: "/elearning",
         },
         {
           category: "Websites",
           src: require("../assets/website.jpeg"),
           description:
             "Having your business online is one of the requirements of the fourth industrial revolution as this will broaden your target market.",
+            routes: "/website-building",
         },
         {
           category: "Marketing",
           src: require("../assets/marketing2.jpeg"),
           description:
             "Being present on Social Media increases awareness, connects you with your customers, boosts leads, and income. ",
+            routes: "/marketing",
         },
       ],
       selectedCategory: "Sales",
