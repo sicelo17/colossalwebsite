@@ -3,14 +3,13 @@
     <div class="partners__title">
       <h2>Our trusted Partners</h2>
     </div>
-    <carousel :items-to-show="3" :wrapAround="true">
+    <carousel :items-to-show="2" :wrapAround="true">
       <slide v-for="slide in slides" :key="slide">
         <img :src="slide.src" />
       </slide>
 
       <template #addons>
         <navigation />
-
       </template>
     </carousel>
   </div>
@@ -67,4 +66,9 @@ img {
    font-size: var(--h2-font-size);
 }
 
+@media only screen and (max-width: 400px) {
+  img {
+    width: 150px;
+  }
+}
 </style>
