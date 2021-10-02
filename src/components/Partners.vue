@@ -1,5 +1,8 @@
 <template>
   <div class="partners bd-container">
+    <div class="partners__title">
+      <h2>Our trusted Partners</h2>
+    </div>
     <carousel :items-to-show="3" :wrapAround="true">
       <slide v-for="slide in slides" :key="slide">
         <img :src="slide.src" />
@@ -54,9 +57,14 @@ img {
   object-fit: contain;
 }
 
-.carousel__next,
-.carousel__prev {
-  background-color: var(--blue);
+.partners__title {
+  text-align: center;
+  padding:0 1.2rem 1.2rem 1.2rem;
+}
+
+.partners__title h2 {
+   font-weight: var(--font-semi-bold);
+   font-size: var(--h2-font-size);
 }
 
 </style>

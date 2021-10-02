@@ -113,6 +113,7 @@ img {
   background-image: url("https://media.gettyimages.com/photos/mmmi-wonder-picture-id1047502598?k=6&m=1047502598&s=612x612&w=0&h=8JgvyNDhw7wD0E5FyI8rN2tYnWhvcKxE3v49jAYRbB8=");
   background-repeat: no-repeat;
   background-size: cover;
+  object-fit: contain;
   width: 100%;
   height: 100vh;
   display: flex;
