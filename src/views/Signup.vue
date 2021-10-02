@@ -78,8 +78,23 @@ export default {
   },
   methods: {
     submitForm() {
-      console.log("Form was submitted");
-    },
+      this.errors = []
+            if (this.username === '') {
+                this.errors.push('The username is missing')
+            }
+            if (this.password === '') {
+                this.errors.push('The password is too short')
+            }
+            if (this.password !== this.password2) {
+                this.errors.push('The passwords doesn\'t match')
+            }
+            if (!this.errors.length) {
+                const formData = {
+                    username: this.username,
+                    password: this.password
+                }
+    }
+    }
   },
 
 }
@@ -92,7 +107,7 @@ export default {
 }
 
 .register-page {
-    height: 95vh;
+    height: 95%;
 }
 .card {
     height: 95%;
@@ -100,6 +115,7 @@ export default {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 5rem;
 }
 
 .card-details {
