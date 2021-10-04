@@ -1,25 +1,25 @@
 <template>
   <header class="l-header" id="header">
     <nav class="nav bd-container" id="navbar">
-      <router-link to="/" class="nav_logo">ColossalHub</router-link>
+      <nav class="nav bd-container" id="navbar">
+        <router-link to="/" class="nav_logo">ColossalHub</router-link>
 
-      <div class="nav_menu" id="nav-menu">
-        <ul class="nav_list">
-          <router-link class="nav_item" to="/">Home</router-link>
-          <router-link class="nav_item" to="/services">Services</router-link>
-          <router-link class="nav_item" to="/industries">Industries</router-link>
-          <router-link class="nav_item" to="/products">Products</router-link>
-        </ul>
-      </div>
+        <div class="nav_menu" id="nav-menu">
+          <div class="navLinks" v-for="link in links" :key="link">
+            <router-link :to="link.route" class="nav__item">{{
+              link.name
+            }}</router-link>
+          </div>
+        </div>
 
-      <div class="nav_buttons" id="nav-buttons">
-        <router-link to="/trial" class="button_link"
-          ><button class="trial-button">Free Trial</button></router-link
-        >
-        <router-link to="/login" class="button_link"
-          ><button class="log-button">Sign In</button></router-link
-        >
-      </div>
+        <div class="nav_menu">
+          <div class="nav_buttons" v-for="button in buttons" :key="button">
+          <button :class="button.class">
+            <router-link :to="button.route">{{ button.name }} </router-link>
+          </button>
+        </div>
+        </div>
+      </nav>
 
       <div class="nav_toggle" id="nav-toggle">
         <button class="nav_button" id="nav-button" @click="toggleMenu">
@@ -33,6 +33,20 @@
 <script>
 export default {
     name: "Header",
+    data(){
+      return {
+        links: [
+          {name: "Home", route: "/"},
+          {name: "Services", route: "/services"},
+          {name: "Industries", route: "/industries"},
+          {name: "Products", route: "/products"},
+        ],
+        buttons: [
+          {name: "Free Trial", route: "/trial", class: "trial-button"},
+          {name: "Sign Up", route: "/login", class: "log-button"},
+        ]
+      }
+    },
   methods: {
     toggleMenu() {
       const menuBox = document.getElementById("nav-menu");
@@ -74,12 +88,16 @@ export default {
   display: none;
 }
 
+.nav_menu {
+  display: flex;
+}
+
 .nav_item:hover {
   color: var(--turquoise);
   transition: 0.2s ease-in all;
 }
 
-.nav_item:not(:last-child) {
+.nav__item {
   margin-right: var(--mb-2);
 }
 
@@ -87,7 +105,7 @@ export default {
   background: inherit;
 }
 
-.button_link:not(:last-child) {
+.nav_buttons:not(:last-child) {
   margin-right: 1.5rem;
 }
 
