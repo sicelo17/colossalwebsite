@@ -15,7 +15,7 @@
         <div class="nav_menu">
           <div class="nav_buttons" v-for="button in buttons" :key="button">
           <button :class="button.class">
-            <router-link :to="button.route">{{ button.name }} </router-link>
+            <router-link :to="button.route" class="button">{{ button.name }} </router-link>
           </button>
         </div>
         </div>
@@ -120,7 +120,9 @@ button {
   font-weight: var(--font-semi-bold);
   cursor: pointer;
 }
-
+.button:hover {
+  color: var(--white);
+}
 .trial-button {
   background-color: var(--turquoise);
 }
