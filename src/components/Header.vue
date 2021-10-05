@@ -92,7 +92,7 @@ export default {
   display: flex;
 }
 
-.nav_item:hover {
+.nav__item:hover {
   color: var(--turquoise);
   transition: 0.2s ease-in all;
 }
@@ -101,13 +101,10 @@ export default {
   margin-right: var(--mb-2);
 }
 
-.button_link {
-  background: inherit;
-}
-
 .nav_buttons:not(:last-child) {
   margin-right: 1.5rem;
 }
+
 
 button {
   padding: 0.5rem 2rem;
@@ -120,9 +117,12 @@ button {
   font-weight: var(--font-semi-bold);
   cursor: pointer;
 }
-.button:hover {
-  color: var(--white);
+
+.button {
+  padding: 0;
+  background: inherit;
 }
+
 .trial-button {
   background-color: var(--turquoise);
 }
@@ -155,13 +155,15 @@ button {
     transition: 0.4s;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 0 0 1rem 1rem;
+    display: flex;
+    flex-direction: column;
   }
 
-  .nav_item {
+  .nav__item {
       padding: 2rem;
   }
 
-  .nav_list {
+  .navLinks {
     display: flex;
     flex-direction: column;
   }
