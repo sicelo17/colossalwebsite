@@ -2,7 +2,9 @@
   <header class="l-header" id="header">
     <nav class="nav bd-container" id="navbar">
       <nav class="nav bd-container" id="navbar">
-        <router-link to="/" class="nav_logo">ColossalHub</router-link>
+        <router-link to="/" class="nav_logo">
+        <img class="nav__img" src="../assets/COLOSSAL-02.jpeg" alt="">
+        </router-link>
 
         <div class="nav_menu" id="nav-menu">
           <div class="navLinks" v-for="link in links" :key="link">
@@ -74,11 +76,15 @@ export default {
 .nav_logo {
   background: inherit;
 }
+.nav__img {
+  height: 4rem;
+  object-fit: contain;
+}
 .nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 4rem;
+  height: 4.1rem;
   font-weight: var(--font-semi-bold);
   font-style: italic;
   font-size: var(--h2-font-size);
