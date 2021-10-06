@@ -4,7 +4,7 @@
       <div class="login-page">
         <div class="card">
           <div class="card-details">
-            <span>ColossalHub</span>
+            <img src="../assets/COLOSSAL-02.jpeg" alt="">
             <h3>Sign In</h3>
 
             <form @submit.prevent="submitForm">
@@ -153,4 +153,9 @@ button:hover {
   text-decoration: underline;
   font-style: normal;
 }
+
+ img {
+   height: 60px;
+   object-fit: contain;
+ }
 </style>
