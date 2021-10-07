@@ -111,6 +111,7 @@ export default {
 
 .register-page {
   height: 95%;
+  padding: 3rem 0;
 }
 .card {
   height: 100%;
