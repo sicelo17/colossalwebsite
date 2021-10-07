@@ -4,7 +4,7 @@
       <div class="login-page">
         <div class="card">
           <div class="card-details">
-            <img src="../assets/COLOSSAL-02.jpeg" alt="">
+            <img src="../assets/COLOSSAL-02.jpeg" alt="" />
             <h3>Sign In</h3>
 
             <form @submit.prevent="submitForm">
@@ -64,7 +64,7 @@ export default {
   },
   methods: {
     submitForm() {
-      this.$router.push('/')
+      this.$router.push("/");
     },
   },
 };
@@ -79,7 +79,7 @@ export default {
   height: 95vh;
 }
 .card {
-  height: 95%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -92,6 +92,10 @@ export default {
   border-radius: 2rem;
   height: 50%;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 input {
@@ -154,8 +158,8 @@ button:hover {
   font-style: normal;
 }
 
- img {
-   height: 60px;
-   object-fit: contain;
- }
+img {
+  height: 60px;
+  object-fit: contain;
+}
 </style>
