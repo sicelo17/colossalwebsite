@@ -26,9 +26,9 @@
                 />
               </div>
 
-              <div class="notification" v-if="errors.length">
-                <p v-for="error in errors" v-bind:key="error">{{ error }}</p>
-              </div>
+               <div class="notification is-danger" v-if="errors.length">
+            <p v-for="error in errors" v-bind:key="error">{{ error }}</p>
+          </div>
 
               <div class="field">
                 <button>Sign In</button>
