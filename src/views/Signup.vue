@@ -113,7 +113,7 @@ export default {
   height: 95%;
 }
 .card {
-  height: 95%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -125,7 +125,6 @@ export default {
   background: var(--white);
   padding: 4rem;
   border-radius: 2rem;
-  height: 70%;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -170,7 +169,7 @@ button {
   font-family: var(--body-font);
   font-style: italic;
   border-radius: 3rem;
-  font-size: 1.3rem;
+  font-size: var(--h3-font-size);
   padding: 0.6rem 2rem;
   cursor: pointer;
   background: var(--blue);
