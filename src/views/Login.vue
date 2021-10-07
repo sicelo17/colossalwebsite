@@ -50,6 +50,7 @@
 </template>
 
 <script>
+import { toast } from 'bulma-toast'
 export default {
   name: "Login",
   data() {
@@ -63,11 +64,35 @@ export default {
     document.title = "LogIn | ColossalHub";
   },
   methods: {
-    submitForm() {
-      this.$router.push("/");
-    },
+      async submitForm() {
+      axios.defaults.headers.common["Authorization"] = "";
+      localStorage.removeItem("token");
+      const formData = {
+        username: this.username,
+        password: this.password,
+      };
+      await axios
+        .post("/api/v1/token/login/", formData)
+        .then((response) => {
+          const token = response.data.auth_token;
+          this.$store.commit("setToken", token);
+          axios.defaults.headers.common["Authorization"] = "Token " + token;
+          localStorage.setItem("token", token);
+          this.$router.push('/')
+        })
+        .catch((error) => {
+          if (error.response) {
+            for (const property in error.response.data) {
+              this.errors.push(`${property}: ${error.response.data[property]}`);
+            }
+          } else {
+            this.errors.push("Something went wrong. Please try again");
+            console.log(JSON.stringify(error));
+          }
+        });
+    }
   },
-};
+}
 </script>
 
 <style scoped>
