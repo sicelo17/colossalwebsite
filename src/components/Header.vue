@@ -3,7 +3,7 @@
     <nav class="nav bd-container" id="navbar">
       <nav class="nav bd-container" id="navbar">
         <router-link to="/" class="nav_logo">
-        <img class="nav__img" src="../assets/COLOSSAL-02.jpeg" alt="">
+          <img class="nav__img" src="../assets/COLOSSAL-02.jpeg" alt="" />
         </router-link>
 
         <div class="nav_menu" id="nav-menu">
@@ -16,10 +16,12 @@
 
         <div class="nav_menu">
           <div class="nav_buttons" v-for="button in buttons" :key="button">
-          <button :class="button.class">
-            <router-link :to="button.route" class="button">{{ button.name }} </router-link>
-          </button>
-        </div>
+            <router-link :to="button.route" class="button">
+              <button :class="button.class">
+                {{ button.name }}
+              </button>
+            </router-link>
+          </div>
         </div>
       </nav>
 
@@ -34,21 +36,21 @@
 
 <script>
 export default {
-    name: "Header",
-    data(){
-      return {
-        links: [
-          {name: "Home", route: "/"},
-          {name: "Services", route: "/services"},
-          {name: "Industries", route: "/industries"},
-          {name: "Products", route: "/products"},
-        ],
-        buttons: [
-          {name: "Free Trial", route: "/trial", class: "trial-button"},
-          {name: "Sign Up", route: "/login", class: "log-button"},
-        ]
-      }
-    },
+  name: "Header",
+  data() {
+    return {
+      links: [
+        { name: "Home", route: "/" },
+        { name: "Services", route: "/services" },
+        { name: "Industries", route: "/industries" },
+        { name: "Products", route: "/products" },
+      ],
+      buttons: [
+        { name: "Free Trial", route: "/trial", class: "trial-button" },
+        { name: "Sign Up", route: "/login", class: "log-button" },
+      ],
+    };
+  },
   methods: {
     toggleMenu() {
       const menuBox = document.getElementById("nav-menu");
@@ -67,10 +69,10 @@ export default {
 
 <style scoped>
 .router-link-active {
-    background: var(--off-white);
-    padding: .5rem;
-    border-radius: .5rem;
-    font-weight: var(--font-bold);
+  background: var(--off-white);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  font-weight: var(--font-bold);
 }
 
 .nav_logo {
@@ -110,7 +112,6 @@ export default {
 .nav_buttons:not(:last-child) {
   margin-right: 1.5rem;
 }
-
 
 button {
   padding: 0.5rem 2rem;
@@ -166,7 +167,7 @@ button {
   }
 
   .nav__item {
-      padding: 2rem;
+    padding: 2rem;
   }
 
   .navLinks {
