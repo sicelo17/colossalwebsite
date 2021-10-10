@@ -99,7 +99,7 @@ export default {
                     password: this.password
                 }
                 axios
-                    .post("", formData)
+                    .post("https://jsonplaceholder.typicode.com/users", formData)
                     .then(response => {
                         toast({
                             message: 'Account created, please log in!',
