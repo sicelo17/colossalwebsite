@@ -10,10 +10,10 @@
             <form @submit.prevent="submitForm">
               <div class="field">
                 <input
-                  type="email"
+                  type="text"
                   class="input"
-                  placeholder="Email Address"
-                  v-model="email"
+                  placeholder="Username"
+                  v-model="username"
                 />
               </div>
 
@@ -50,6 +50,7 @@
 </template>
 
 <script>
+import axios  from 'axios';
 export default {
   name: "Login",
   data() {
@@ -71,7 +72,7 @@ export default {
         password: this.password,
       };
       await axios
-        .post("https://jsonplaceholder.typicode.com/todos", formData)
+        .post("https://jsonplaceholder.typicode.com/users", formData)
         .then((response) => {
           const token = response.data.auth_token;
           this.$store.commit("setToken", token);
