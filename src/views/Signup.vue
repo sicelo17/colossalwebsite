@@ -67,11 +67,13 @@
 </template>
 
 <script>
-import { toast } from 'bulma-toast'
+import axios  from 'axios';
+import { toast } from 'bulma-toast';
 export default {
   name: "SignUp",
   data() {
     return {
+      email: "",
       username: "",
       password: "",
       password2: "",
@@ -95,11 +97,12 @@ export default {
             }
             if (!this.errors.length) {
                 const formData = {
+                    email: this.email,
                     username: this.username,
                     password: this.password
                 }
                 axios
-                    .post("", formData)
+                    .post("https://jsonplaceholder.typicode.com/users", formData)
                     .then(response => {
                         toast({
                             message: 'Account created, please log in!',

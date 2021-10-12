@@ -47,7 +47,7 @@ export default {
       ],
       buttons: [
         { name: "Free Trial", route: "/trial", class: "trial-button" },
-        { name: "Sign Up", route: "/login", class: "log-button" },
+        { name: "Sign In", route: "/login", class: "log-button" },
       ],
     };
   },
