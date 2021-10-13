@@ -6,10 +6,10 @@
              <h1>About Us</h1>
              <div class="footer-links">
                 <ul class="footer_routes">
-                     <router-link class="links" to="/about-us">Our Company</router-link>
-                     <router-link class="links" to="/team">Our team</router-link>
-                     <router-link class="links" to="/careers">Careers</router-link>
-                     <router-link class="links" to="/blogs">Our Blogs</router-link>
+                     <router-link class="links" to="/">Our Company</router-link>
+                     <router-link class="links" to="/">Our team</router-link>
+                     <router-link class="links" to="/">Careers</router-link>
+                     <router-link class="links" to="">Our Blogs</router-link>
                 </ul>
              </div>
          </div>
@@ -30,9 +30,9 @@
              <h1>Contact Us</h1>
              <div class="footer-links">
                 <ul class="footer_routes">
-                     <router-link class="links" to="/about-us">Our Location</router-link>
+                     <router-link class="links" to="/">Our Location</router-link>
                      <router-link class="links" to="/">Our email</router-link>
-                     <router-link class="links" to="/map">Site Map</router-link>
+                     <router-link class="links" to="/">Site Map</router-link>
                      <router-link class="links" to="/">Social Media</router-link>
                 </ul>
              </div>

@@ -99,8 +99,10 @@ export default {
                 const formData = {
                     email: this.email,
                     username: this.username,
-                    password: this.password
+                    password: this.password,
+                    password2: this.password2,
                 }
+                console.log(formData)
                 axios
                     .post("https://jsonplaceholder.typicode.com/users", formData)
                     .then(response => {
