@@ -72,8 +72,8 @@ export default {
         password: this.password,
       };
       await axios
-        .post("https://jsonplaceholder.typicode.com/users", formData)
-        .then((response) => {
+        .post("https://apidjackets.codewithstein.com/api/v1/users/", formData)
+        .then(response => {
           const token = response.data.auth_token;
           this.$store.commit("setToken", token);
           axios.defaults.headers.common["Authorization"] = "Token " + token;
@@ -90,8 +90,8 @@ export default {
             console.log(JSON.stringify(error));
           }
         });
-    }
   },
+}
 }
 </script>
 

@@ -45,11 +45,13 @@
               </div>
 
               <div class="notification is-danger" v-if="errors.length">
-                <p v-for="error in errors" v-bind:key="error">{{ error }}</p>
+                <p v-for="error in errors" :key="error">
+                  {{ error }}
+                </p>
               </div>
 
               <div class="field">
-                <button>Sign Up</button>
+                <button class="button">Sign Up</button>
               </div>
 
               <hr />
@@ -68,7 +70,7 @@
 
 <script>
 import axios  from 'axios';
-import { toast } from 'bulma-toast';
+import toast from 'bulma-toast'
 export default {
   name: "SignUp",
   data() {
@@ -84,7 +86,7 @@ export default {
     document.title = "Sign Up | ColossalHub";
   },
   methods: {
-    submitForm() {
+    async submitForm() {
             this.errors = []
             if (this.username === '') {
                 this.errors.push('The username is missing')
@@ -99,10 +101,11 @@ export default {
                 const formData = {
                     email: this.email,
                     username: this.username,
-                    password: this.password
+                    password: this.password,
+                    password2: this.password2,
                 }
                 axios
-                    .post("https://jsonplaceholder.typicode.com/users", formData)
+                    .post("https://apidjackets.codewithstein.com/api/v1/users/", formData)
                     .then(response => {
                         toast({
                             message: 'Account created, please log in!',
@@ -110,8 +113,9 @@ export default {
                             dismissible: true,
                             pauseOnHover: true,
                             duration: 2000,
-                            position: 'bottom-right',
+                            position: 'center',
                         })
+                        console.log(response)
                         this.$router.push('/login')
                     })
                     .catch(error => {
@@ -193,7 +197,7 @@ h3 {
   font-size: var(--h2-font-size);
 }
 
-button {
+.button {
   font-family: var(--body-font);
   font-style: italic;
   border-radius: 3rem;
@@ -205,7 +209,7 @@ button {
   border: none;
 }
 
-button:hover {
+.button:hover {
   background: linear-gradient(to bottom right, var(--blue), var(--turquoise));
   color: var(--white);
   transition: 0.2s ease-in all;
@@ -228,4 +232,16 @@ img {
   height: 60px;
   object-fit: contain;
 }
+.notification {
+  width: 200px;
+}
+.notification p {
+  background: rgb(226, 81, 81);
+  color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  border-radius: .5rem;
+  margin-top: .5rem;
+}
+
 </style>
