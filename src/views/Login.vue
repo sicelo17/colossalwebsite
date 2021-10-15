@@ -2,7 +2,11 @@
   <div class="sign-in">
     <div class="bd-container">
       <div class="login-page">
-        <div class="card">
+        <div class="login__left">
+          <img src="../assets/illustration-grow-together.svg" alt="" />
+        </div>
+        <div class="login__right">
+          <div class="card">
           <div class="card-details">
             <img src="../assets/COLOSSAL-02.jpeg" alt="" />
             <h3>Sign In</h3>
@@ -43,6 +47,7 @@
               to sign up!
             </form>
           </div>
+        </div>
         </div>
       </div>
     </div>
@@ -96,12 +101,22 @@ export default {
 </script>
 
 <style scoped>
-.sign-in {
-  background: linear-gradient(to bottom right, var(--blue), var(--turquoise));
-}
 
 .login-page {
+  margin: 3rem 0 0 0;
   height: 95vh;
+  display: flex;
+}
+
+.login__left {
+  flex: .6;
+}
+.login__left > img {
+  height: 100%;
+}
+
+.login__right {
+  flex: .4;
 }
 .card {
   height: 100%;
@@ -186,5 +201,19 @@ button:hover {
 img {
   height: 60px;
   object-fit: contain;
+}
+
+@media only screen and (max-width: 750px) {
+  .sign-in {
+  background: linear-gradient(to bottom right, var(--blue), var(--turquoise));
+}
+
+.login__left{
+  display: none;
+}
+
+.login__right {
+  flex: 1;
+}
 }
 </style>
