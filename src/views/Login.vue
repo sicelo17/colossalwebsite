@@ -102,7 +102,6 @@ export default {
 
 <style scoped>
 
-
 .login-page {
   margin: 3rem 0 0 0;
   height: 95vh;
@@ -202,5 +201,19 @@ button:hover {
 img {
   height: 60px;
   object-fit: contain;
+}
+
+@media only screen and (max-width: 750px) {
+  .sign-in {
+  background: linear-gradient(to bottom right, var(--blue), var(--turquoise));
+}
+
+.login__left{
+  display: none;
+}
+
+.login__right {
+  flex: 1;
+}
 }
 </style>
