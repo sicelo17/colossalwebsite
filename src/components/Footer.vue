@@ -60,6 +60,7 @@ footer {
     background: var(--blue);
     color: var(--turquoise);
     font-style: italic;
+    z-index: var(--z-top);
 }
 
 h1 {

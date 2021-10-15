@@ -1,7 +1,7 @@
 <template>
   <div class="page__trial">
     <div class="bd-container">
-      <h2>Request a Demo</h2>
+      <h2>Request A Demo</h2>
 
       <div class="trial__page">
         <div class="trial__left">
@@ -87,10 +87,13 @@ export default {
 
 <style scoped>
 .page__trial {
-  margin: 5rem;
+    padding-bottom: 3rem;
 }
 h2 {
   text-align: center;
+  font-style: italic;
+  font-size: 2rem;
+  margin-top: 5rem;
 }
 
 .trial__page {
@@ -146,5 +149,29 @@ button:hover {
   background: linear-gradient(to bottom right, var(--blue), var(--turquoise));
   color: var(--white);
   transition: 0.2s ease-in all;
+}
+
+@media only screen and (max-width: 800px){
+    .trial__left{
+        display: flex;
+        flex: .5;
+    }
+
+    .trial__right{
+        flex: .5;
+    }
+}
+@media only screen and (max-width: 690px) {
+    .page__trial {
+        background: url("../assets/illustration-your-users.svg");
+        object-fit: contain;
+    }
+    .trial__left{
+        display: none;
+    }
+
+    .trial__right{
+        flex: 1;
+    }
 }
 </style>
