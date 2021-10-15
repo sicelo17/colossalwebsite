@@ -1,118 +1,122 @@
 <template>
   <footer>
-     <div class="bd-container">
-          <div class="footer_links">
-         <div class="footer_column">
-             <h1>About Us</h1>
-             <div class="footer-links">
-                <ul class="footer_routes">
-                     <router-link class="links" to="/">Our Company</router-link>
-                     <router-link class="links" to="/">Our team</router-link>
-                     <router-link class="links" to="/">Careers</router-link>
-                     <router-link class="links" to="">Our Blogs</router-link>
-                </ul>
-             </div>
-         </div>
+    <div class="bd-container">
+      <div class="footer_links">
+        <div class="footer_column">
+          <h1>About Us</h1>
+          <div class="footer-links">
+            <ul class="footer_routes">
+              <router-link class="links" to="/">Our Company</router-link>
+              <router-link class="links" to="/">Our team</router-link>
+              <router-link class="links" to="/">Careers</router-link>
+              <router-link class="links" to="">Our Blogs</router-link>
+            </ul>
+          </div>
+        </div>
 
-          <div class="footer_column">
-             <h1>Partnership</h1>
-             <div class="footer-links">
-                <ul class="footer_routes">
-                     <router-link class="links" to="/login">Sign In</router-link>
-                     <router-link class="links" to="/">Become a Partner</router-link>
-                     <router-link class="links" to="/">Newsletter</router-link>
-                     <router-link class="links" to="/">Testimonies</router-link>
-                </ul>
-             </div>
-         </div>
+        <div class="footer_column">
+          <h1>Partnership</h1>
+          <div class="footer-links">
+            <ul class="footer_routes">
+              <router-link class="links" to="/login">Sign In</router-link>
+              <router-link class="links" to="/">Become a Partner</router-link>
+              <router-link class="links" to="/">Newsletter</router-link>
+              <router-link class="links" to="/">Testimonies</router-link>
+            </ul>
+          </div>
+        </div>
 
-          <div class="footer_column">
-             <h1>Contact Us</h1>
-             <div class="footer-links">
-                <ul class="footer_routes">
-                     <router-link class="links" to="/">Our Location</router-link>
-                     <router-link class="links" to="/">Our email</router-link>
-                     <router-link class="links" to="/">Site Map</router-link>
-                     <router-link class="links" to="/">Social Media</router-link>
-                </ul>
-             </div>
-         </div>
+        <div class="footer_column">
+          <h1>Contact Us</h1>
+          <div class="footer-links">
+            <ul class="footer_routes">
+              <a href="mailto:info@colossalhub.com"
+                ><span class="links">Contact Us</span></a
+              > 
+              <router-link class="links" to="/">Social Media</router-link>
+              <address>
+                Batanai Garderns, First Floor<br />
+                Cnr First Street and Jason Moyo, Harare
+              </address>
+
+             
+            </ul>
+          </div>
+        </div>
       </div>
 
       <div class="copyright">
-          <p>Copyright &copy; 2021 - ColossalHub</p>
+        <p>Copyright &copy; 2021 - ColossalHub</p>
       </div>
-     </div>
-     <div class="partnership">
-          <p>In partnership with Odoo &reg;</p>
-      </div>
+    </div>
+    <div class="partnership">
+      <p>In partnership with Odoo &reg;</p>
+    </div>
   </footer>
 </template>
 
 <script>
-export default {
-
-}
+export default {};
 </script>
 
 <style scoped>
 footer {
-    background: var(--blue);
-    color: var(--turquoise);
-    font-style: italic;
-    z-index: var(--z-top);
+  background: var(--blue);
+  color: var(--turquoise);
+  font-style: italic;
+  z-index: var(--z-top);
 }
 
 h1 {
-    font-size: 2.4rem;
-    font-weight: var(--font-medium);
+  font-size: 2.4rem;
+  font-weight: var(--font-medium);
 }
 p {
-    font-size: 1rem;
+  font-size: 1rem;
 }
 .footer_links {
-    display: flex;
-    justify-content: space-between;
-    padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
 }
 
-.links{
-    color: var(--turquoise);
-    display: flex;
-    font-size: 1rem;
-    font-style: italic;
+.links {
+  color: var(--turquoise);
+  display: flex;
+  font-size: 1rem;
+  font-style: italic;
 }
 
 .links:hover {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .copyright {
-    padding: 1rem;
+  padding: 1rem;
 }
 
-.copyright, 
-.partnership{
-    text-align: center;
+.copyright,
+.partnership {
+  text-align: center;
 }
 
 .partnership {
-    background: #172547;
-    padding: .5rem;
+  background: #172547;
+  padding: 0.5rem;
 }
 
 /* ===== RESPONSIVE DESIGN ===== */
 
 @media only screen and (max-width: 672px) {
-    .footer_links {
-        display: grid;
-        grid-template-columns: repeat(2 ,1fr);
-    }
+  .footer_links {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media only screen and (max-width: 500px) {
-    .footer_links {
-        grid-template-columns: 1fr;
-    }
+  .footer_links {
+    grid-template-columns: 1fr;
+  }
 }
 </style>
