@@ -139,7 +139,7 @@ button {
   font-family: var(--body-font);
   font-style: italic;
   font-size: 1.3rem;
-  border: 1px solid var(--blue);
+  border: none;
   cursor: pointer;
   color: var(--white);
   background-color: var(--blue);
