@@ -8,7 +8,7 @@
           <img src="../assets/illustration-your-users.svg" alt="" />
         </div>
         <div class="trial__right">
-          <form @submit.prevent="submitForm">
+          <form @submit.prevent="requestDemo">
             <div class="field">
               <input
                 type="text"
@@ -37,6 +37,19 @@
                 v-model="phone_no"
               />
             </div>
+
+            <div class="field">
+              <input
+                type="text"
+                class="input"
+                placeholder="What's your app of choice"
+                v-model="app"
+              />
+            </div>
+
+            <div class="field">
+              <button>Request Demo</button>
+            </div>
           </form>
         </div>
       </div>
@@ -46,13 +59,29 @@
 
 <script>
 export default {
-    data() {
-        return {
-            name: "",
-            phone_no: "",
-            email:""
-        }
-    }
+  data() {
+    return {
+      name: "",
+      phone_no: "",
+      email: "",
+      app: "",
+    };
+  },
+  methods: {
+      requestDemo() {
+          const formDetails = {
+              name :this.name,
+              phone_no : this.phone_no,
+              email:  this.email,
+              app : this.app,
+          }
+
+          console.log(formDetails)
+      }
+  },
+  mounted() {
+    document.title = "Trial | ColossalHub";
+  },
 };
 </script>
 
@@ -66,10 +95,56 @@ h2 {
 
 .trial__page {
   display: flex;
+  flex-wrap: wrap;
 }
 
-.trial__left,
+.trial__left {
+  flex: 0.6;
+}
+
 .trial__right {
-  flex: 0.5;
+  flex: 0.4;
+  padding: 0 2rem;
+}
+
+input {
+  border-radius: 2rem;
+  border: 1px solid var(--blue);
+  color: var(--blue);
+  width: 100%;
+  font-size: 1.2rem;
+  padding: 0.5rem;
+  font-family: var(--body-font);
+  font-style: italic;
+}
+
+input:focus {
+  outline: none;
+  border: 3px solid var(--blue);
+}
+
+::placeholder {
+  font-family: var(--body-font);
+  font-style: italic;
+}
+.field {
+  margin-top: 2rem;
+}
+
+button {
+  padding: 1rem;
+  font-family: var(--body-font);
+  font-style: italic;
+  font-size: 1.3rem;
+  border: 1px solid var(--blue);
+  cursor: pointer;
+  color: var(--white);
+  background-color: var(--blue);
+}
+
+button:hover {
+  background: linear-gradient(to bottom right, var(--blue), var(--turquoise));
+  color: var(--white);
+  transition: 0.2s ease-in all;
 }
 </style>
