@@ -30,29 +30,27 @@
           <h1>Contact Us</h1>
           <div class="footer-links">
             <ul class="footer_routes">
-                <div class="links__div">
-                  <span>
-             <i class='bx bx-map' ></i>
-            </span>
+              <div class="links__div">
+                <span>
+                  <i class="bx bx-map"></i>
+                </span>
                 Batanai Garderns, First Floor<br />
                 Cnr First Street and Jason Moyo, Harare
               </div>
               <a href="mailto:info@colossalhub.com" class="footer__email"
                 ><span>
-                    <span>
-              <i class='bx bxs-envelope-open' ></i>
-            </span>
-                    info@colossalhub.com</span></a
-              > 
-             <div class="social__icons">
-                 <a href="#"><i class='bx bxl-facebook' ></i></a>
-            <a href="#"><i class='bx bxl-twitter' ></i></a>
-            <a href="#"><i class='bx bxl-instagram' ></i></a>
-            <a href="#"><i class='bx bxl-linkedin'></i></a>
-             </div>
-              
-
-             
+                  <span>
+                    <i class="bx bxs-envelope-open"></i>
+                  </span>
+                  info@colossalhub.com</span
+                ></a
+              >
+              <div class="social__icons">
+                <a href="#"><i class="bx bxl-facebook"></i></a>
+                <a href="#"><i class="bx bxl-twitter"></i></a>
+                <a href="#"><i class="bx bxl-instagram"></i></a>
+                <a href="#"><i class="bx bxl-linkedin"></i></a>
+              </div>
             </ul>
           </div>
         </div>
@@ -89,7 +87,7 @@ p {
 }
 
 span {
-    margin-right: .4rem;
+  margin-right: 0.4rem;
 }
 .footer_links {
   display: flex;
@@ -98,7 +96,7 @@ span {
   flex-wrap: wrap;
 }
 
-.links{
+.links {
   color: var(--turquoise);
   display: flex;
   font-size: 1rem;
@@ -124,21 +122,22 @@ span {
 }
 
 .social__icons {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    color: var(--turquoise);
-    font-size: 1rem;
+  display: flex;
+  align-items: center;
+  color: var(--turquoise);
+  font-size: 1rem;
+}
+
+.social__icons > a:not(:last-child) {
+  margin-right: 1rem;
 }
 
 .social__icons > a {
-    color: var(--turquoise);
-    font-size: 1rem;
+  color: var(--turquoise);
+  font-size: 1rem;
 }
-
 
 .footer__email {
-    color: var(--turquoise);
+  color: var(--turquoise);
 }
-
 </style>

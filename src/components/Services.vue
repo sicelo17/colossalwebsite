@@ -262,6 +262,7 @@ h2 {
 }
 
 .filter input[type="radio"]:checked ~ * {
+  font-weight: var(--font-bold);
   border-bottom: solid 4px var(--turquoise);
   transition: 0.3s ease all;
 }
