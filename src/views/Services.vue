@@ -10,13 +10,12 @@
             <div class="service_info">
               <div class="heading">
                 <h2>Sales</h2>
+              </div>
                 <div v-for="service in service_1" :key="service" class="service_link">
                   <router-link :to=service.route>
                   {{service.name}}
                   </router-link>
                 </div>
-                
-              </div>
             </div>
 
             <div class="service_info">
@@ -24,39 +23,9 @@
                 <h2>Finance</h2>
               </div>
 
-              <div class="service_link">
-                <router-link to="/accounting">
-                Accounting
-                </router-link>
-              </div>
-
-              <div class="service_link">
-                <router-link to="/invoicing">
-                Invoicing
-                </router-link>
-              </div>
-
-              <div class="service_link">
-                <router-link to="/expenses">
-                Expenses
-                </router-link>
-              </div>
-
-              <div class="service_link">
-                <router-link to="/spreadsheet">
-                Spreadsheet
-                </router-link>
-              </div>
-
-              <div class="service_link">
-                <router-link to="/documents">
-                Documents
-                </router-link>
-              </div>
-
-              <div class="service_link">
-                <router-link to="/sign">
-                Sign
+              <div v-for="service in service_2" :key="service" class="service_link">
+                <router-link :to=service.route >
+                {{service.name}}
                 </router-link>
               </div>
             </div>
@@ -66,47 +35,13 @@
                 <h2>Operations</h2>
               </div>
 
-              <div class="service_link">
-                <router-link to="/inventory">
-                Inventory
+              <div v-for="service in service_3" :key="service" class="service_link">
+                <router-link :to=service.route >
+                {{service.name}}
                 </router-link>
               </div>
 
-              <div class="service_link">
-                <router-link to="project">
-                  Project
-                </router-link>
-              </div>
-
-              <div class="service_link">
-                <router-link to="/purchase">
-                Purchase
-                </router-link>
-              </div>
-
-              <div class="service_link">
-                <router-link to="/timesheet">
-                Timesheets
-                </router-link>
-              </div>
-
-              <div class="service_link">
-                <router-link to="/helpdesk">
-                Helpdesk
-                </router-link>
-              </div>
-
-              <div class="service_link">
-                <router-link to="/documents">
-                Documents
-                </router-link>
-              </div>
-
-              <div class="service_link">
-                <router-link to="/fieldservice">
-                Field Service
-                </router-link>
-              </div>
+            
 
             </div>
 
@@ -351,23 +286,54 @@ export default {
   data() {
     return {
       service_1: [
-        {name: "CRM", route: "/"},
-        {name: "Sales", route: "/"},
-        {name: "Point of Sale", route: "/"},
-        {name: "Subscriptions", route: "/"},
-        {name: "Rental", route: "/"}
-      ]
-    }
+        { name: "CRM", route: "/" },
+        { name: "Sales", route: "/" },
+        { name: "Point of Sale", route: "/" },
+        { name: "Subscriptions", route: "/" },
+        { name: "Rental", route: "/" },
+      ],
+      service_2: [
+        {name: "Accounting", route: "/"},
+        {name: "Invoicing", route: "/"},
+        {name: "Expenses", route: "/"},
+        {name: "Spreadsheet", route: "/"},
+        {name: "Documents", route: "/"}
+      ],
+      service_3: [
+        {name: "Inventory", route: "/"},
+        {name: "Project", route: "/"},
+        {name: "Purchase", route: "/"},
+        {name: "Timesheets", route: "/"},
+        {name: "Helpdesk", route: "/"},
+        {name: "Field Service", route: "/"},
+      ],
+      service_4: [
+        {name: "MRP", route: "/"},
+        {name: "PLM", route: "/"},
+        {name: "MRP Maintenance", route: "/"},
+        {name: "Quality", route: "/"},
+      ],
+      service_5: [
+        {name: "Recruitment", route: "/"},
+        {name: "PLM", route: "/"},
+        {name: "MRP Maintenance", route: "/"},
+        {name: "Quality", route: "/"},
+      ],
+    };
   },
-mounted() {
+  mounted() {
     document.title = "Services | ColossalHub";
   },
-}
+};
 </script>
 
 <style scoped>
 .section {
-  background: linear-gradient(to top left, rgba(161, 191, 231, 0.897), var(--turquoise));
+  background: linear-gradient(
+    to top left,
+    rgba(161, 191, 231, 0.897),
+    var(--turquoise)
+  );
 }
 .services {
   display: grid;
@@ -384,7 +350,7 @@ mounted() {
 
 .service_link {
   font-size: var(--normal-font-size);
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
 
 .service_link:hover {
@@ -400,7 +366,7 @@ mounted() {
 
 /* ==== RESPONSIVE DESIGN ==== */
 
-@media only screen and (max-width: 840px){
+@media only screen and (max-width: 840px) {
   .services {
     grid-template-columns: repeat(2, 1fr);
   }
