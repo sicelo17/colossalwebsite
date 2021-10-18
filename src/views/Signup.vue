@@ -2,65 +2,70 @@
   <div class="sign-up">
     <div class="bd-container">
       <div class="register-page">
-        <div class="card">
-          <div class="card-details">
-            <img src="../assets/COLOSSAL-02.jpeg" alt="" />
-            <h3>Sign Up</h3>
+        <div class="register__left">
+          <img src="../assets/illustration-flowing-conversation.svg" alt="" />
+        </div>
+        <div class="register__right">
+          <div class="card">
+            <div class="card-details">
+              <img src="../assets/COLOSSAL-02.jpeg" alt="" />
+              <h3>Sign Up</h3>
 
-            <form @submit.prevent="submitForm">
-              <div class="field">
-                <input
-                  type="name"
-                  class="input"
-                  placeholder="Username"
-                  v-model="username"
-                />
-              </div>
+              <form @submit.prevent="submitForm">
+                <div class="field">
+                  <input
+                    type="name"
+                    class="input"
+                    placeholder="Username"
+                    v-model="username"
+                  />
+                </div>
 
-              <div class="field">
-                <input
-                  type="email"
-                  class="input"
-                  placeholder="Email Address"
-                  v-model="email"
-                />
-              </div>
+                <div class="field">
+                  <input
+                    type="email"
+                    class="input"
+                    placeholder="Email Address"
+                    v-model="email"
+                  />
+                </div>
 
-              <div class="field">
-                <input
-                  type="password"
-                  class="input"
-                  placeholder="Password"
-                  v-model="password"
-                />
-              </div>
+                <div class="field">
+                  <input
+                    type="password"
+                    class="input"
+                    placeholder="Password"
+                    v-model="password"
+                  />
+                </div>
 
-              <div class="field">
-                <input
-                  type="password"
-                  class="input"
-                  placeholder="Confirm Password"
-                  v-model="password2"
-                />
-              </div>
+                <div class="field">
+                  <input
+                    type="password"
+                    class="input"
+                    placeholder="Confirm Password"
+                    v-model="password2"
+                  />
+                </div>
 
-              <div class="notification is-danger" v-if="errors.length">
-                <p v-for="error in errors" :key="error">
-                  {{ error }}
-                </p>
-              </div>
+                <div class="notification is-danger" v-if="errors.length">
+                  <p v-for="error in errors" :key="error">
+                    {{ error }}
+                  </p>
+                </div>
 
-              <div class="field">
-                <button class="button">Sign Up</button>
-              </div>
+                <div class="field">
+                  <button class="button">Sign Up</button>
+                </div>
 
-              <hr />
-              <router-link to="/login"
-                ><span class="login-link"
-                  >I already have an account</span
-                ></router-link
-              >
-            </form>
+                <hr />
+                <router-link to="/login"
+                  ><span class="login-link"
+                    >I already have an account</span
+                  ></router-link
+                >
+              </form>
+            </div>
           </div>
         </div>
       </div>
@@ -69,8 +74,8 @@
 </template>
 
 <script>
-import axios  from 'axios';
-import toast from 'bulma-toast'
+import axios from "axios";
+import toast from "bulma-toast";
 export default {
   name: "SignUp",
   data() {
@@ -87,63 +92,74 @@ export default {
   },
   methods: {
     async submitForm() {
-            this.errors = []
-            if (this.username === '') {
-                this.errors.push('The username is missing')
+      this.errors = [];
+      if (this.username === "") {
+        this.errors.push("The username is missing");
+      }
+      if (this.password === "") {
+        this.errors.push("The password is too short");
+      }
+      if (this.password !== this.password2) {
+        this.errors.push("The passwords doesn't match");
+      }
+      if (!this.errors.length) {
+        const formData = {
+          email: this.email,
+          username: this.username,
+          password: this.password,
+          password2: this.password2,
+        };
+        axios
+          .post("https://apidjackets.codewithstein.com/api/v1/users/", formData)
+          .then((response) => {
+            toast({
+              message: "Account created, please log in!",
+              type: "is-success",
+              dismissible: true,
+              pauseOnHover: true,
+              duration: 2000,
+              position: "center",
+            });
+            console.log(response);
+            this.$router.push("/login");
+          })
+          .catch((error) => {
+            if (error.response) {
+              for (const property in error.response.data) {
+                this.errors.push(
+                  `${property}: ${error.response.data[property]}`
+                );
+              }
+              console.log(JSON.stringify(error.response.data));
+            } else if (error.message) {
+              this.errors.push("Something went wrong. Please try again");
+
+              console.log(JSON.stringify(error));
             }
-            if (this.password === '') {
-                this.errors.push('The password is too short')
-            }
-            if (this.password !== this.password2) {
-                this.errors.push('The passwords doesn\'t match')
-            }
-            if (!this.errors.length) {
-                const formData = {
-                    email: this.email,
-                    username: this.username,
-                    password: this.password,
-                    password2: this.password2,
-                }
-                axios
-                    .post("https://apidjackets.codewithstein.com/api/v1/users/", formData)
-                    .then(response => {
-                        toast({
-                            message: 'Account created, please log in!',
-                            type: 'is-success',
-                            dismissible: true,
-                            pauseOnHover: true,
-                            duration: 2000,
-                            position: 'center',
-                        })
-                        console.log(response)
-                        this.$router.push('/login')
-                    })
-                    .catch(error => {
-                        if (error.response) {
-                            for (const property in error.response.data) {
-                                this.errors.push(`${property}: ${error.response.data[property]}`)
-                            }
-                            console.log(JSON.stringify(error.response.data))
-                        } else if (error.message) {
-                            this.errors.push('Something went wrong. Please try again')
-                            
-                            console.log(JSON.stringify(error))
-                        }
-                    })
-            }
-        }
-    }
+          });
+      }
+    },
+  },
 };
 </script>
 
 <style scoped>
-.sign-up {
-  background: linear-gradient(to bottom left, var(--off-white), var(--blue));
-}
-
 .register-page {
   height: 95%;
-  padding: 4rem 0;
+  padding: 2rem 0;
+  display: flex;
+}
+
+.register__left {
+  flex: 0.6;
+}
+
+.register__right {
+  flex: 0.4;
+}
+
+.register__left > img {
+  height: 100%;
 }
 .card {
   height: 100%;
@@ -240,8 +256,22 @@ img {
   color: aliceblue;
   display: flex;
   flex-direction: column;
-  border-radius: .5rem;
-  margin-top: .5rem;
+  border-radius: 0.5rem;
+  margin-top: 0.5rem;
 }
 
+@media only screen and (max-width: 770px) {
+  
+  .sign-up {
+    background: linear-gradient(to bottom right, var(--blue), var(--turquoise));
+  }
+
+  .register__left {
+    display: none;
+  }
+
+  .register__right {
+    flex: 1;
+  }
+}
 </style>

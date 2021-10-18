@@ -9,7 +9,7 @@
               <router-link class="links" to="/">Our Company</router-link>
               <router-link class="links" to="/">Our team</router-link>
               <router-link class="links" to="/">Careers</router-link>
-              <router-link class="links" to="">Our Blogs</router-link>
+              <router-link class="links" to="/">Our Blogs</router-link>
             </ul>
           </div>
         </div>
@@ -30,16 +30,27 @@
           <h1>Contact Us</h1>
           <div class="footer-links">
             <ul class="footer_routes">
-              <a href="mailto:info@colossalhub.com"
-                ><span class="links">Contact Us</span></a
-              > 
-              <router-link class="links" to="/">Social Media</router-link>
-              <address>
+              <div class="links__div">
+                <span>
+                  <i class="bx bx-map"></i>
+                </span>
                 Batanai Garderns, First Floor<br />
                 Cnr First Street and Jason Moyo, Harare
-              </address>
-
-             
+              </div>
+              <a href="mailto:info@colossalhub.com" class="footer__email"
+                ><span>
+                  <span>
+                    <i class="bx bxs-envelope-open"></i>
+                  </span>
+                  info@colossalhub.com</span
+                ></a
+              >
+              <div class="social__icons">
+                <a href="#"><i class="bx bxl-facebook"></i></a>
+                <a href="#"><i class="bx bxl-twitter"></i></a>
+                <a href="#"><i class="bx bxl-instagram"></i></a>
+                <a href="#"><i class="bx bxl-linkedin"></i></a>
+              </div>
             </ul>
           </div>
         </div>
@@ -74,10 +85,15 @@ h1 {
 p {
   font-size: 1rem;
 }
+
+span {
+  margin-right: 0.4rem;
+}
 .footer_links {
   display: flex;
   justify-content: space-between;
   padding: 2rem;
+  flex-wrap: wrap;
 }
 
 .links {
@@ -105,18 +121,23 @@ p {
   padding: 0.5rem;
 }
 
-/* ===== RESPONSIVE DESIGN ===== */
-
-@media only screen and (max-width: 672px) {
-  .footer_links {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-  }
+.social__icons {
+  display: flex;
+  align-items: center;
+  color: var(--turquoise);
+  font-size: 1rem;
 }
 
-@media only screen and (max-width: 500px) {
-  .footer_links {
-    grid-template-columns: 1fr;
-  }
+.social__icons > a:not(:last-child) {
+  margin-right: 1rem;
+}
+
+.social__icons > a {
+  color: var(--turquoise);
+  font-size: 1rem;
+}
+
+.footer__email {
+  color: var(--turquoise);
 }
 </style>
