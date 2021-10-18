@@ -56,6 +56,11 @@ export default {};
   outline: none;
 }
 
+.contact__email::placeholder {
+  font-family: var(--body-font);
+  font-size: 1.2rem;
+}
+
 .contact__link:link,
 .contact__link:visited {
   display: inline-block;
