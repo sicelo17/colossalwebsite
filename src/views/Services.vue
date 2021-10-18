@@ -10,31 +10,12 @@
             <div class="service_info">
               <div class="heading">
                 <h2>Sales</h2>
-                <div class="service_link">
-                  <router-link to="/crm">
-                  CRM
+                <div v-for="service in service_1" :key="service" class="service_link">
+                  <router-link :to=service.route>
+                  {{service.name}}
                   </router-link>
                 </div>
-                <div class="service_link">
-                  <router-link to="/sales">
-                  Sales
-                  </router-link>
-                </div>
-                <div class="service_link">
-                  <router-link to="/point-of-sale">
-                  Point of Sale
-                  </router-link>
-                </div>
-                <div class="service_link">
-                  <router-link to="/subscriptions">
-                  Subscriptions
-                  </router-link>
-                </div>
-                <div class="service_link">
-                  <router-link to="/rental">
-                  Rental
-                  </router-link>
-                </div>
+                
               </div>
             </div>
 
@@ -367,6 +348,17 @@
 
 <script>
 export default {
+  data() {
+    return {
+      service_1: [
+        {name: "CRM", route: "/"},
+        {name: "Sales", route: "/"},
+        {name: "Point of Sale", route: "/"},
+        {name: "Subscriptions", route: "/"},
+        {name: "Rental", route: "/"}
+      ]
+    }
+  },
 mounted() {
     document.title = "Services | ColossalHub";
   },
