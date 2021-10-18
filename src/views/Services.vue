@@ -1,283 +1,147 @@
 <template>
   <section class="section">
-      <div class="service-page">
-        <div class="bd-container">
-          <div class="service-title">
-            <h1>Our Services</h1>
+    <div class="service-page">
+      <div class="bd-container">
+        <div class="service-title">
+          <h1>Our Services</h1>
+        </div>
+        <div class="services">
+          <div class="service_info">
+            <div class="heading">
+              <h2>Sales</h2>
+            </div>
+            <div
+              v-for="service in service_1"
+              :key="service"
+              class="service_link"
+            >
+              <router-link :to="service.route">
+                {{ service.name }}
+              </router-link>
+            </div>
           </div>
-          <div class="services">
 
-            <div class="service_info">
-              <div class="heading">
-                <h2>Sales</h2>
-              </div>
-                <div v-for="service in service_1" :key="service" class="service_link">
-                  <router-link :to=service.route>
-                  {{service.name}}
-                  </router-link>
-                </div>
+          <div class="service_info">
+            <div class="heading">
+              <h2>Finance</h2>
             </div>
 
-            <div class="service_info">
-              <div class="heading">
-                <h2>Finance</h2>
-              </div>
+            <div
+              v-for="service in service_2"
+              :key="service"
+              class="service_link"
+            >
+              <router-link :to="service.route">
+                {{ service.name }}
+              </router-link>
+            </div>
+          </div>
 
-              <div v-for="service in service_2" :key="service" class="service_link">
+          <div class="service_info">
+            <div class="heading">
+              <h2>Operations</h2>
+            </div>
+
+            <div
+              v-for="service in service_3"
+              :key="service"
+              class="service_link"
+            >
+              <router-link :to="service.route">
+                {{ service.name }}
+              </router-link>
+            </div>
+          </div>
+
+          <div class="service_info">
+            <div class="heading">
+              <h2>Manufacturing</h2>
+            </div>
+
+            <div
+              v-for="service in service_4"
+              :key="service"
+              class="service_link"
+            >
+              <router-link :to="service.route">
+                {{ service.name }}
+              </router-link>
+            </div>
+          </div>
+
+          <div class="service_info">
+            <div class="heading">
+              <h2>Human Resources</h2>
+            </div>
+
+            <div
+              v-for="service in service_5"
+              :key="service"
+              class="service_link"
+            >
+              <router-link :to="service.route">
+                {{ service.name }}
+              </router-link>
+            </div>
+          </div>
+
+          <div class="service_info">
+            <div class="heading">
+              <h2>Communication</h2>
+            </div>
+
+            <div
+              v-for="service in service_6"
+              :key="service"
+              class="service_link"
+            >
+              <router-link :to="service.route">
+                {{ service.name }}
+              </router-link>
+            </div>
+          </div>
+
+          <div class="service_info">
+            <div class="heading">
+              <h2>Marketing</h2>
+            </div>
+            <div
+              v-for="service in service_7"
+              :key="service"
+              class="service_link"
+            >
+              <router-link :to="service.route">
+                {{ service.name }}
+              </router-link>
+            </div>
+          </div>
+
+          <div class="service_info">
+            <div class="heading">
+              <h2>Website</h2>
+            </div>
+
+            <div v-for="service in service_8" :key="service" class="service_link">
                 <router-link :to=service.route >
                 {{service.name}}
                 </router-link>
               </div>
+          </div>
+
+          <div class="service_info">
+            <div class="heading">
+              <h2>Analytics</h2>
             </div>
 
-            <div class="service_info">
-              <div class="heading">
-                <h2>Operations</h2>
-              </div>
-
-              <div v-for="service in service_3" :key="service" class="service_link">
+            <div v-for="service in service_9" :key="service" class="service_link">
                 <router-link :to=service.route >
                 {{service.name}}
                 </router-link>
               </div>
-
-            
-
-            </div>
-
-            <div class="service_info">
-              <div class="heading">
-                <h2>Manufacturing</h2>
-              </div>
-
-              <div class="service_link">
-                <router-link to="/mrp">
-                MRP
-                </router-link>
-              </div>
-
-              <div class="service_link">
-                <router-link to="/plm">
-                PLM
-                </router-link>
-              </div>
-
-              <div class="service_link">
-                <router-link to="/mrp-maintenance">
-                MRP Maintenance
-                </router-link>
-              </div>
-
-              <div class="service_link">
-                <router-link to="/quality">
-                Quality
-                </router-link>
-              </div>
-
-
-
-            </div>
-
-            <div class="service_info">
-              <div class="heading">
-                <h2>Human Resources</h2>
-              </div>
-
-              <div class="service_link">
-                <router-link to="/recruitment">
-                Recruitment
-                </router-link>
-              </div>
-
-              <div class="service_link">
-                <router-link to="/employees">
-                Employees
-                </router-link>
-              </div>
-
-              <div class="service_link">
-                <router-link to="/fleet">
-                Fleet
-                </router-link>
-              </div>
-
-              <div class="service_link">
-                <router-link to="/time-off">
-                Time-off
-                </router-link>
-              </div>
-
-              <div class="service_link">
-                <router-link to="/recruitment">
-                Recruitment
-                </router-link>
-              </div>
-            </div>
-
-            <div class="service_info">
-              <div class="heading">
-                <h2>Communication</h2>
-              </div>
-
-              <div class="service_link">
-                <router-link to="/discuss">
-                Discuss
-                </router-link>
-              </div>
-
-              <div class="service_link">
-                <router-link to="/e-signature">
-                eSignature
-                </router-link>
-              </div>
-
-              <div class="service_link">
-                <router-link to="/survey">
-                Survey
-                </router-link>
-              </div>
-            </div>
-
-            <div class="service_info">
-              <div class="heading">
-                <h2>Marketing</h2>
-              </div>
-
-              <div class="service_link">
-                <router-link to="/automation">
-                Automation
-                </router-link>
-              </div>
-
-              <div class="service_link">
-                <router-link to="/email-marketing">
-                Email Marketing
-                </router-link>
-              </div>
-
-              <div class="service_link">
-                <router-link to="/sms-marketing">
-                SMS Marketing
-                </router-link>
-              </div>
-
-              <div class="service_link">
-                <router-link to="/social-marketing">
-                Social Marketing
-                </router-link>
-              </div>
-            </div>
-
-            <div class="service_info">
-              <div class="heading">
-                <h2>Website</h2>
-              </div>
-
-              <div class="service_link">
-                <router-link to="/website-builder">
-                Website Builder
-                </router-link>
-              </div>
-
-              <div class="service_link">
-                <router-link to="/ecommerce">
-                e-Commerce
-                </router-link>
-              </div>
-
-              <div class="service_link">
-                <router-link to="/blogs">
-                Blogs
-                </router-link>
-              </div>
-
-              <div class="service_link">
-                <router-link to="/forum">
-                Forum
-                </router-link>
-              </div>
-
-              <div class="service_link">
-                <router-link to="/elearning">
-                e-Learning
-                </router-link>
-              </div>
-
-              <div class="service_link">
-                <router-link to="/events">
-                Events
-                </router-link>
-              </div>
-
-              <div class="service_link">
-                <router-link to="/livechat">
-                Live Chat
-                </router-link>
-              </div>
-
-              <div class="service_link">
-                <router-link to="/appointments">
-                Appointments
-                </router-link>
-              </div>
-            </div>
-
-            <div class="service_info">
-              <div class="heading">
-                <h2>Analytics</h2>
-              </div>
-
-              <div class="service_link">
-                <router-link to="/people-analytics">
-                People Analytics
-                </router-link>
-              </div>
-
-              <div class="service_link">
-                <router-link to="/customer-analytics">
-                Customer Experience Analytics
-                </router-link>
-              </div>
-
-              <div class="service_link">
-                <router-link to="/customer-segmentation">
-                Customer Segmentation
-                </router-link>
-              </div>
-
-              <div class="service_link">
-                <router-link to="/customer-churn">
-                Customer Churn Prediction
-                </router-link>
-              </div>
-
-              <div class="service_link">
-                <router-link to="/machine-failure">
-                Machine Failure Analytics
-                </router-link>
-              </div>
-
-              <div class="service_link">
-                <router-link to="/marketing-analytics">
-                Marketing Analytics
-                </router-link>
-              </div>
-
-              <div class="service_link">
-                <router-link to="/inventory-analytics">
-                Inventory Analytics
-                </router-link>
-              </div>
-
-              <div class="service_link">
-                <router-link to="/sales-analytics">
-                Sales Analytics
-                </router-link>
-              </div>
-            </div>
           </div>
         </div>
       </div>
+    </div>
   </section>
 </template>
 
@@ -293,31 +157,65 @@ export default {
         { name: "Rental", route: "/" },
       ],
       service_2: [
-        {name: "Accounting", route: "/"},
-        {name: "Invoicing", route: "/"},
-        {name: "Expenses", route: "/"},
-        {name: "Spreadsheet", route: "/"},
-        {name: "Documents", route: "/"}
+        { name: "Accounting", route: "/" },
+        { name: "Invoicing", route: "/" },
+        { name: "Expenses", route: "/" },
+        { name: "Spreadsheet", route: "/" },
+        { name: "Documents", route: "/" },
       ],
       service_3: [
-        {name: "Inventory", route: "/"},
-        {name: "Project", route: "/"},
-        {name: "Purchase", route: "/"},
-        {name: "Timesheets", route: "/"},
-        {name: "Helpdesk", route: "/"},
-        {name: "Field Service", route: "/"},
+        { name: "Inventory", route: "/" },
+        { name: "Project", route: "/" },
+        { name: "Purchase", route: "/" },
+        { name: "Timesheets", route: "/" },
+        { name: "Helpdesk", route: "/" },
+        { name: "Field Service", route: "/" },
       ],
       service_4: [
-        {name: "MRP", route: "/"},
-        {name: "PLM", route: "/"},
-        {name: "MRP Maintenance", route: "/"},
-        {name: "Quality", route: "/"},
+        { name: "MRP", route: "/" },
+        { name: "PLM", route: "/" },
+        { name: "MRP Maintenance", route: "/" },
+        { name: "Quality", route: "/" },
       ],
       service_5: [
-        {name: "Recruitment", route: "/"},
-        {name: "PLM", route: "/"},
-        {name: "MRP Maintenance", route: "/"},
-        {name: "Quality", route: "/"},
+        { name: "Recruitment", route: "/" },
+        { name: "Employees", route: "/" },
+        { name: "Fleet", route: "/" },
+        { name: "Time-Off", route: "/" },
+        { name: "Appraisals", route: "/" },
+        { name: "Referral", route: "/" },
+        { name: "Approvals", route: "/" },
+      ],
+      service_6: [
+        { name: "Discuss", route: "/" },
+        { name: "eSignature", route: "/" },
+        { name: "Survey", route: "/" },
+      ],
+      service_7: [
+        { name: "Automation", route: "/" },
+        { name: "Email", route: "/" },
+        { name: "SMS", route: "/" },
+        { name: "Social", route: "/" },
+      ],
+      service_8: [
+        { name: "Website Builder", route: "/" },
+        { name: "eCommerce", route: "/" },
+        { name: "Blogs", route: "/" },
+        { name: "Forum", route: "/" },
+        { name: "eLearning", route: "/" },
+        { name: "Events", route: "/" },
+        { name: "Live Chat", route: "/" },
+        { name: "Appointments", route: "/" },
+      ],
+      service_9: [
+        { name: "People Analytics", route: "/" },
+        { name: "Customer Experience Analytics", route: "/" },
+        { name: "Customer Segmentation", route: "/" },
+        { name: "Customer Churn Prediction", route: "/" },
+        { name: "Machine Failure Analytics", route: "/" },
+        { name: "Marketing Analytics", route: "/" },
+        { name: "Inventory Analytics", route: "/" },
+        { name: "Sales Analytics", route: "/" },
       ],
     };
   },
