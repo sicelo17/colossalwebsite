@@ -19,7 +19,7 @@
           <div class="footer-links">
             <ul class="footer_routes">
               <router-link class="links" to="/login">Sign In</router-link>
-              <router-link class="links" to="/">Become a Partner</router-link>
+              <router-link class="links" to="/trial">Become a Partner</router-link>
               <router-link class="links" to="/">Newsletter</router-link>
               <router-link class="links" to="/">Testimonies</router-link>
             </ul>

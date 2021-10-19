@@ -121,11 +121,15 @@
               <h2>Website</h2>
             </div>
 
-            <div v-for="service in service_8" :key="service" class="service_link">
-                <router-link :to=service.route >
-                {{service.name}}
-                </router-link>
-              </div>
+            <div
+              v-for="service in service_8"
+              :key="service"
+              class="service_link"
+            >
+              <router-link :to="service.route">
+                {{ service.name }}
+              </router-link>
+            </div>
           </div>
 
           <div class="service_info">
@@ -133,11 +137,15 @@
               <h2>Analytics</h2>
             </div>
 
-            <div v-for="service in service_9" :key="service" class="service_link">
-                <router-link :to=service.route >
-                {{service.name}}
-                </router-link>
-              </div>
+            <div
+              v-for="service in service_9"
+              :key="service"
+              class="service_link"
+            >
+              <router-link :to="service.route">
+                {{ service.name }}
+              </router-link>
+            </div>
           </div>
         </div>
       </div>
