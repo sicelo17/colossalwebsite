@@ -1,3 +1,15 @@
-from django.shortcuts import render
+from django.db.models import Q 
+from django.http import Http404
 
-# Create your views here.
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from rest_framework.decorators import api_view 
+
+from .models import Product, Category
+from .serializers import ProductSerializer, CategorySerializer
+
+class LatestProductsList(APIView):
+    def get(self, request, format=None):
+        products = Product.objects.all()[0:4]  #getting the first four items from the database
+        serializer = ProductSerializer(products, many=True)
+        return Response(serializer.data)
