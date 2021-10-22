@@ -6,10 +6,12 @@
           <h1>We serve the following industries</h1>
         </div>
         <div class="industry-items bd-grid">
-          <div class="ind">
-            <router-link to="/fashion">
-              <span><i class="bx bxs-t-shirt"></i></span>
-              <p>Fashion</p>
+          <div class="ind" v-for="product in latestProducts"
+        :key="product.id"
+        :product="product">
+            <router-link :to="product.get_absolute_url">
+              <span><i :class=product.icon></i></span>
+              <p>{{product.name}}</p>
             </router-link>
           </div>
 
@@ -96,10 +98,32 @@
 </template>
 
 <script>
+import axios from 'axios'
 export default {
+  data(){
+    return{
+      latestProducts: []
+    }
+  },
   mounted() {
+    this.getLatestProducts()
     document.title = "Industries | ColossalHub";
   },
+  methods: {
+    async getLatestProducts() {
+      
+      await axios
+        .get('/api/v1/latest-products/')
+        .then(response => {
+          this.latestProducts = response.data
+          console.log(response.data)
+        })
+        .catch(error => {
+          console.log(error)
+        })
+    }
+  }
+
 };
 </script>
 
