@@ -8,11 +8,13 @@ from rest_framework.decorators import api_view
 from .models import Product, Category
 from .serializers import ProductSerializer, CategorySerializer
 
-class IndustriesList(APIView):
+
+class ProductList(APIView):
     def get(self, request, format=None):
-        products = Product.objects.all() #getting the first four items from the database
+        products = Product.objects.all()
         serializer = ProductSerializer(products, many=True)
         return Response(serializer.data)
+
 
 class ProductDetail(APIView):
     def get_object(self, category_slug, product_slug):

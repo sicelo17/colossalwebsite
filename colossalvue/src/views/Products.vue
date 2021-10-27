@@ -5,10 +5,12 @@
         <h1>Some of our products</h1>
       </div>
       <div class="products-page bd-grid">
-          <div class="product">
-            <router-link to="/crm">
-              <span class="app2"><i class="bx bx-support"></i></span>
-              <p>CRM</p>
+         <div class="product" v-for="product in products"
+        :key="product.id"
+        :product="product">
+            <router-link :to="product.get_absolute_url">
+              <span><i :class=product.icon></i></span>
+              <p>{{product.name}}</p>
             </router-link>
           </div>
 
@@ -77,6 +79,7 @@
 </template>
 
 <script>
+import axios from 'axios'
 export default {
   data(){
     return {
@@ -90,9 +93,9 @@ export default {
   methods: {
     async getProducts() {
       await axios
-        .get('/api/v1/latest-products/')
+        .get('/api/v1/products/')
         .then(response => {
-          this.latestProducts = response.data
+          this.products = response.data
           console.log(response.data)
         })
         .catch(error => {
