@@ -78,9 +78,29 @@
 
 <script>
 export default {
+  data(){
+    return {
+      products: []
+    }
+  },
   mounted() {
+    this.getProducts()
     document.title = "Products | ColossalHub";
   },
+  methods: {
+    async getProducts() {
+      await axios
+        .get('/api/v1/latest-products/')
+        .then(response => {
+          this.latestProducts = response.data
+          console.log(response.data)
+        })
+        .catch(error => {
+          console.log(error)
+        })
+    }
+  }
+
 };
 </script>
 
