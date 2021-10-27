@@ -10,7 +10,7 @@ from .serializers import ProductSerializer, CategorySerializer
 
 class LatestProductsList(APIView):
     def get(self, request, format=None):
-        products = Product.objects.all()[0:4]  #getting the first four items from the database
+        products = Product.objects.all() #getting the first four items from the database
         serializer = ProductSerializer(products, many=True)
         return Response(serializer.data)
 
