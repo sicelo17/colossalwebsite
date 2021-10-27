@@ -111,12 +111,11 @@ export default {
   },
   methods: {
     async getLatestProducts() {
-      
       await axios
         .get('/api/v1/latest-products/')
         .then(response => {
           this.latestProducts = response.data
-          console.log(response.data)
+          console.log(latestProducts)
         })
         .catch(error => {
           console.log(error)
