@@ -35,7 +35,7 @@ export default {
   methods: {
     async getIndustries() {
       await axios
-        .get('/api/v1/products/')
+        .get('/api/v1/industry/')
         .then(response => {
           this.industries = response.data
         })
