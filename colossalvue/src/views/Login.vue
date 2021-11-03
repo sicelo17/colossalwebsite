@@ -77,13 +77,14 @@ export default {
         password: this.password,
       };
       await axios
-        .post("https://apidjackets.codewithstein.com/api/v1/users/", formData)
-        .then(response => {
+        .post("/api/v1/token/login/", formData)
+        .then((response) => {
           const token = response.data.auth_token;
           this.$store.commit("setToken", token);
           axios.defaults.headers.common["Authorization"] = "Token " + token;
           localStorage.setItem("token", token);
-          this.$router.push('/')
+          const toPath = this.$route.query.to || "/";
+          this.$router.push(toPath);
         })
         .catch((error) => {
           if (error.response) {
@@ -95,8 +96,8 @@ export default {
             console.log(JSON.stringify(error));
           }
         });
+    },
   },
-}
 }
 </script>
 
