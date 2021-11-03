@@ -53,7 +53,7 @@ export default {
 }
 .app2 {
   font-size: 4rem;
-  padding: 1rem;
+  padding: 1.3rem .5rem;
   border-radius: 1rem;
   background: var(--white);
 }
