@@ -9,68 +9,8 @@
         :key="product.id"
         :product="product">
             <router-link :to="product.get_absolute_url">
-              <span><i :class=product.icon></i></span>
+              <span><i class="app2" :class=product.icon></i></span>
               <p>{{product.name}}</p>
-            </router-link>
-          </div>
-
-          <div class="product">
-            <router-link to="/erp">
-              <span class="app2"><i class="bx bx-cog"></i></span>
-              <p>ERP</p>
-            </router-link>
-          </div>
-
-          <div class="product">
-            <router-link to="/human-management">
-              <span class="app2"><i class="bx bxs-user-circle"></i></span>
-              <p>Human Resources</p>
-            </router-link>
-          </div>
-
-
-
-          <div class="product">
-            <router-link to="/sales">
-              <span class="app2"><i class="bx bx-trending-up"></i></span>
-              <p>Sales</p>
-            </router-link>
-          </div>
-
-          <div class="product">
-            <router-link to="/accounting">
-              <span class="app2"><i class="bx bxs-coin-stack"></i></span>
-              <p>Accounting</p>
-            </router-link>
-          </div>
-
-          <div class="product">
-            <router-link to="/ecommerce">
-              <span class="app2"><i class="bx bxs-shopping-bags"></i></span>
-              <p>E-commerce</p>
-            </router-link>
-          </div>
-
-
-
-          <div class="product">
-            <router-link to="/websites">
-              <span class="app2"><i class="bx bxl-html5"></i></span>
-              <p>Websites</p>
-            </router-link>
-          </div>
-
-          <div class="product">
-            <router-link to="/analytics">
-              <span class="app2"><i class="bx bx-line-chart-down"></i></span>
-              <p>Analytics</p>
-            </router-link>
-          </div>
-
-          <div class="product">
-            <router-link to="/business-intelligence">
-              <span class="app2"><i class="bx bxs-briefcase-alt-2"></i></span>
-              <p>Business Intelligence</p>
             </router-link>
           </div>
       </div>
@@ -113,7 +53,7 @@ export default {
 }
 .app2 {
   font-size: 4rem;
-  padding: 0.5rem;
+  padding: 1rem;
   border-radius: 1rem;
   background: var(--white);
 }
