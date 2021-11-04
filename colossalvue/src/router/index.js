@@ -3,6 +3,7 @@ import Home from '../views/Home.vue'
 import Industries from '../views/Industries.vue'
 import Services from '../views/Services.vue'
 import Products from '../views/Products.vue'
+import Product from '../views/Product.vue'
 import Login from '../views/Login.vue'
 import SignUp from '../views/Signup.vue'
 import Trial from '../views/Trial.vue'
@@ -50,6 +51,11 @@ const routes = [
     path: '/trial',
     name: 'Trial',
     component: Trial
+  },
+  {
+    path: '/:category_slug/:product_slug/',
+    name: 'Product',
+    component: Product
   },
 ]
 
