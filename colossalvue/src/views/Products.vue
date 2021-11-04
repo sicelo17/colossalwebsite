@@ -36,7 +36,6 @@ export default {
         .get('/api/v1/products/')
         .then(response => {
           this.products = response.data
-          console.log(response.data)
         })
         .catch(error => {
           console.log(error)
