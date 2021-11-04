@@ -9,7 +9,7 @@
         :key="product.id"
         :product="product">
             <router-link :to="product.get_absolute_url">
-              <span><i class="app2" :class=product.icon></i></span>
+              <span class="app2"><i :class=product.icon></i></span>
               <p>{{product.name}}</p>
             </router-link>
           </div>
@@ -52,7 +52,7 @@ export default {
 }
 .app2 {
   font-size: 4rem;
-  padding: 1.3rem .5rem;
+  padding: .5rem;
   border-radius: 1rem;
   background: var(--white);
 }
