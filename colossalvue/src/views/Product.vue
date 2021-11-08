@@ -14,15 +14,9 @@
       <div class="column is-3">
         <h2 class="subtitle">Information</h2>
 
-        <p><strong>Price: </strong>${{ product.price }}</p>
-
         <div class="field has-addons mt-6">
           <div class="control">
             <input type="number" class="input" min="1" v-model="quantity" />
-          </div>
-
-          <div class="control">
-            <a class="button is-dark" @click="addToCart()">Add to cart</a>
           </div>
         </div>
       </div>
@@ -51,8 +45,8 @@ export default {
         .get(`/api/v1/${category_slug}/${product_slug}`)
         .then((response) => {
           this.product = response.data;
-          console.log(product)
-          document.title = this.product.name + " | FamilyTreeLite";
+          console.log(response)
+          document.title = this.product.name + " | ColossalHub";
         })
         .catch((error) => {
           console.log(error);
