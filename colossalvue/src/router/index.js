@@ -5,6 +5,7 @@ import Services from '../views/Services.vue'
 import Products from '../views/Products.vue'
 import Product from '../views/Product.vue'
 import Login from '../views/Login.vue'
+import MyAccount from '../views/MyAccount.vue'
 import SignUp from '../views/Signup.vue'
 import Trial from '../views/Trial.vue'
 
@@ -46,6 +47,14 @@ const routes = [
     path: '/sign-up',
     name: 'SignUp',
     component: SignUp
+  },
+  {
+    path: '/my-account',
+    name: 'MyAccount',
+    component: MyAccount,
+    meta: {
+      requireLogin: true
+    }
   },
   {
     path: '/trial',
