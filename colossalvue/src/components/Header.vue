@@ -15,7 +15,15 @@
         </div>
 
         <div class="nav_menu">
-          <div class="nav_buttons" v-for="button in buttons" :key="button">
+          <div v-if="$store.state.isAuthenticated" class="nav_buttons">
+            <button @click="logout()" class="trial-button">LogOut</button>
+          </div>
+          <div
+            v-else
+            class="nav_buttons"
+            v-for="button in buttons"
+            :key="button"
+          >
             <router-link :to="button.route" class="button">
               <button :class="button.class">
                 {{ button.name }}
@@ -35,6 +43,7 @@
 </template>
 
 <script>
+import axios from "axios";
 export default {
   name: "Header",
   data() {
@@ -73,6 +82,10 @@ export default {
   padding: 0.5rem;
   border-radius: 0.5rem;
   font-weight: var(--font-bold);
+}
+
+.bx {
+  font-size: 2rem;
 }
 
 .nav_logo {
