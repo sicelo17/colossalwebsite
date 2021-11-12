@@ -90,7 +90,7 @@ export default {
   width: 100vw;
 }
  .hero__left {
-   flex: .4;
+   flex: .5;
    text-align: center;
  }
 
