@@ -1,6 +1,7 @@
 <template>
   <section class="section">
-    <div class="hero-section">
+
+      <div class="hero-section">
       <agile
         :dots="false"
         :autoplay="true"
@@ -12,24 +13,35 @@
         :pauseOnHover="false"
       >
         <div class="slide">
-          <div class="hero-1">
-            <div class="hero-text bd-grid bd-container">
+          <div class="hero">
+            <div class="hero__left">
+            <div class="hero__text bd-container">
               <h2>Struggling to boost your sales because you have to spend a lot of time and money doing repetitive tasks that can be easily automated? Try one of our systems and notice the difference in both time and your wallet.</h2>
             </div>
             <router-link to="/trial">
               <button class="button">Try for free</button>
             </router-link>
           </div>
+
+          <div class="hero__right">
+            <img class="hero__img" src="../assets/img/home2.svg" alt="">
+          </div>
+          </div>
         </div>
 
         <div class="slide">
-          <div class="hero-2">
-            <div class="hero-text bd-grid bd-container">
+          <div class="hero">
+            <div class="hero__left">
+            <div class="hero__text bd-container">
               <h2>Have you been looking for a way to modernise your business to remain competitive? Let technology handle the stressful things while you relax and focus on being more productive.</h2>
             </div>
             <router-link to="/trial">
               <button class="button">Request Demo</button>
             </router-link>
+          </div>
+          <div class="hero__right">
+            <img class="hero__img" src="../assets/img/home1.svg" alt="">
+          </div>
           </div>
         </div>
       </agile>
@@ -47,16 +59,7 @@ export default {
 </script>
 
 <style scoped>
-.agile__dots {
-  bottom: 10px;
-  flex-direction: column;
-  right: 30px;
-  position: absolute;
-}
 
-.agile__dot {
-  margin: 5px 0;
-}
 
 /*.agile button {
   background: transparent;
@@ -77,14 +80,9 @@ export default {
 }
 */
 
-img {
-  object-fit: cover;
-}
 
 .slide {
-  display: block;
-  height: 80vh;
-  object-fit: cover;
+  height: 90vh;
   width: 100vw;
 }
 
@@ -100,6 +98,7 @@ img {
   font-style: italic;
   font-weight: var(--font-bold);
   border: none;
+  margin-top: 2rem;
 }
 
 .button:hover {
@@ -108,33 +107,31 @@ img {
   transition: 0.2s ease-in all;
 }
 
-.hero-1,
-.hero-2 {
-  background-image: url("https://media.gettyimages.com/photos/mmmi-wonder-picture-id1047502598?k=6&m=1047502598&s=612x612&w=0&h=8JgvyNDhw7wD0E5FyI8rN2tYnWhvcKxE3v49jAYRbB8=");
-  background-repeat: no-repeat;
-  background-size: cover;
-  object-fit: contain;
-  width: 100%;
-  height: 100vh;
+.hero {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
+  height: 80vh;
+  width: 100vw;
 }
+ .hero__left {
+   flex: .6;
+   text-align: center;
+ }
 
-.hero-2 {
-  background-image: url("https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
-}
+ .hero__right {
+   flex: .4;
+ }
 
-.hero-text {
-  grid-template-columns: repeat(2, 1fr);
-  line-height: 1.3;
-}
+ .hero__text {
+   line-height: 1.6rem;
+ }
+
 
 /* ===== RESPONSIVE DESIGN ===== */
 
 @media only screen and (max-width:900px){
-  .hero-text {
+  .hero__text {
     grid-template-columns: 1fr;
     padding-bottom: 2rem;
     text-align: center;
@@ -142,8 +139,12 @@ img {
 }
 
 @media only screen and (max-width: 400px) {
-  .hero-1,
-  .hero-2 {
+
+  .hero__right {
+    display: none;
+  }
+  .hero__left {
+    flex: 1;
     background: var(--blue);
     color: var(--white);
   }
